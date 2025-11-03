@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
   .cover-group {
     font-size: 18px;
-    color: #000000ff;
+    color: #00000000;
     margin-bottom: 40px;
   }
   .cover-authors {
@@ -86,10 +86,33 @@ document.addEventListener("DOMContentLoaded", function() {
 # Basic Concepts for Limits
 
 ## Q1
+Evaluate the limit and justify each step by indicating the appropriate Limit Law(s)
+1. $\lim_{x \to -3} (2x^3+ 6x^2 - 9)$
+2. $\lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)}$
 
 ## Ans1
 
----
+1. 
+$$
+\begin{aligned}
+& \lim_{x \to -3} (2x^3 + 6x^2 - 9) \\
+& = \lim_{x \to -3} (2x^3) + \lim_{x \to -3} (6x^2) - \lim_{x \to -3} (9) && \text{(Sum/Difference Law)} \\
+& = 2 \lim_{x \to -3} (x^3) + 6 \lim_{x \to -3} (x^2) - \lim_{x \to -3} (9) && \text{(Constant Multiple Law)} \\
+& = 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power Law \& Constant Law)} \\
+& = 2(-27) + 6(9) - 9 \\
+& = -54 + 54 - 9 \\
+& = -9
+\end{aligned}
+$$
+
+2. 
+$$
+\begin{aligned}
+& \lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)}\\
+&=  \lim_{x \to 3}\sqrt[3]{x+5}\times \lim_{x\to 3}{(2x^2-3x)} && \text{(Product Law)}\\
+
+\end{aligned}
+$$
 
 ## Q2
 
@@ -247,8 +270,16 @@ document.addEventListener("DOMContentLoaded", function() {
 # Appendix
 
 (可以放聊天記錄，截圖和參考資料)
-## 1
+## Appendix A
+### Limit Laws in class's slides:
+1. Sum Law (先加再微分 = 先各自微分再相加)
+2. Difference Law (先減再微分 = 先各自微分再相減)
+3. Constant Multiple Law (若函式可以提出一個常數，先將提出常數後的函數微分再與提出的常數相乘，結果等於原本函式的微分)
+4. Product Law (先乘再微分 = 先各自微分再相乘)
+5. Quotient Law ()
+6. Power Law ()
+7. Root Law ()
 
-## 2 
+## Appendix B
 
-## 3
+## Appendix C
