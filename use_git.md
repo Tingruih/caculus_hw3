@@ -27,6 +27,6 @@ git clone https://github.com/Tingruih/caculus_hw3
 
 # Alternative method
 1. 到vscode extensions搜尋live share並下載
-2. 點擊 https://prod.liveshare.vsengsaas.visualstudio.com/join?6317C7B0A354EF72F812BC02C19A092A0B68 就可以編輯了
+2. 點擊 https://prod.liveshare.vsengsaas.visualstudio.com/join?74E9A632C73EB5F1DE9E66DA2E18E322A28C 就可以編輯了
 ## 缺點 
 需等創建server的人同意才可以編輯
