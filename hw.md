@@ -7,6 +7,7 @@ puppeteer:
   output:
     pdf_document:
       latex_engine: "pdflatex"
+  css: "./style.css"
 ---
 <!DOCTYPE html>
 <html>
@@ -92,7 +93,7 @@ Evaluate the limit and justify each step by indicating the appropriate Limit Law
 ## Ans1
 
 1. 
-$
+$$
 \begin{aligned}
 &\lim_{x \to -3} (2x^3 + 6x^2 - 9) \\
 &= \lim_{x \to -3} (2x^3) + \lim_{x \to -3} (6x^2) - \lim_{x \to -3} (9) && \text{(Sum/Difference Law)} \\
@@ -103,10 +104,10 @@ $
 &= -54 + 54 - 9 \\
 &= -9
 \end{aligned}
-$
+$$
 
 2. 
-$
+$$
 \begin{aligned}
 &\lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)} \\
 &= \sqrt[3] {\lim_{x \to 3}(x+5)} \times \lim_{x \to 3}(2x^2-3x) &&\text{(Root / Product Law)}\\
@@ -115,58 +116,67 @@ $
 &= 2 \times 9\\
 &=18
 \end{aligned}
-$
+$$
 
----
+***
 
 ## Q2
 Evaluate the limit, if it exists.
 1. $\lim_{x \to -2}(3x-7)$
+
 2. $\lim_{t^2-2t-8}(t-4)$
+
 3. $\lim_{x \to 2}\frac{2-x}{\sqrt{x+2}-2}$
+
 4. $\lim_{x \to 3} \frac{\frac{1}{x} - \frac{1}{3}}{x-3}$
+
 ## Ans2
 
 1. Because $3x-7$ is a continuous function, which means $\lim_{x \to 2}3x-7 = 3\times 2-7(\text{continuous definition:}\lim_{x \to a}f(x) = f(a))$,so we can find out that the limit is $-1$
+
 2. The limit expression is mathematically ill-defined. The notation below $\lim$ ,which is $t^2-2t-8$,is not a valid convergence condition. It fails to specify the value that the variable t is approaching (ex:$t \to 4$). Without this "target point," the limit cannot be calculated, so this problem has no solution.
+
 3. 
 
 
 
----
+***
  
 ## Q3
 
 ## Ans3
----
+
+***
 
 ## Q4
 
 ## Ans4
 
----
+***
 
 ## Q5
 
 ## Ans5
 
----
+***
 
 ## Q6
 
 ## Ans6
----
+
+***
 
 ## Q7
 
 ## Ans7
----
+
+***
 
 ## Q8
 
 ## Ans8
 
-
+***
 
 # Basic Concepts for Continuity
 
@@ -176,7 +186,7 @@ $$ \lim_{h \to 0} f(a + h) = f(a) $$
 
 ## Ans1
 
----
+***
 
 ## Q2
 The graph of a function f is given.
@@ -185,21 +195,22 @@ The graph of a function f is given.
 1. At what numbers a does $\lim_{x \to a}f(x)$ not exist?
 2. At what numbers a is f not continuous?
 3. At what numbers a does  $\lim_{x \to a}f(x)$ exist but f is not continuous at a?
+
 ## Ans2
 
----
+***
 
 ## Q3
 
 ## Ans3
 
----
+***
 
 ## Q4
 
 ## Ans4
 
----
+***
 
 # Crystal Growth Inspection
 
@@ -209,7 +220,7 @@ The graph of a function f is given.
 
 ```
 
----
+***
 
 ## ?2.py
 
@@ -238,15 +249,18 @@ The graph of a function f is given.
 ### 姓名： 
 ### 遇到的困難與挑戰：
 
----
+***
+
 ### 姓名： 
 ### 遇到的困難與挑戰：
 
----
+***
+
 ### 姓名： 
 ### 遇到的困難與挑戰：
 
----
+***
+
 ### 姓名： 
 ### 遇到的困難與挑戰：
 
@@ -274,25 +288,29 @@ The graph of a function f is given.
 ### 心得：
 （應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
 
----
+***
+
 ### 學號：
 ### 姓名：
 ### 心得：
 
----
+***
+
 ### 學號：
 ### 姓名：
 ### 心得：
 
----
+***
+
 ### 學號：
 ### 姓名：
 ### 心得：
 
 # Appendix
 
-(可以放聊天記錄，截圖和參考資料)
+
 ## Appendix A
+
 ### Limit Laws in class's slides:
 1. Sum Law (先加再微分 = 先各自微分再相加)
 2. Difference Law (先減再微分 = 先各自微分再相減)
@@ -304,7 +322,7 @@ The graph of a function f is given.
 8. $\lim_{x\to a}c = c \text{(c為常數)}$
 9. $\lim_{x \to a}x = a$
 10. $\lim_{x \to a}x^n = a^n$
-11. $\lim_{x \to a}\sqrt[n]x = \sqrt[n]a$
+11. $\lim_{x \to a}\sqrt[n]{x} = \sqrt[n]{a}$
 
 ## Appendix B
 
