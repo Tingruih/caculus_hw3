@@ -18,6 +18,7 @@ git config --global user.email "your.email@example.com"
 ```Bash
 git clone https://github.com/Tingruih/caculus_hw3
 ```
+clone下來的檔案應該會在c槽user資料夾裡面
 
 6. 會用到的指令
     * git pull origin main(拉取main這個branch上修改的內容，每一次編輯前都要這樣做)

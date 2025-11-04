@@ -1,12 +1,12 @@
 ---
-pdf_options:
-  printBackground: true
-  displayHeaderFooter: true
-  headerTemplate: '<div></div>'
-  footerTemplate: '<div style="font-size:10px;text-align:center;width:100%;"><span class="pageNumber"></span> / <span class="totalPages"></span></div>'
+puppeteer:
+  format: "A4"
   margin:
-    top: "1.5cm"
-    bottom: "2.0cm"
+    top: "2cm"
+    bottom: "2cm"
+  output:
+    pdf_document:
+      latex_engine: "pdflatex"
 ---
 <!DOCTYPE html>
 <html>
@@ -79,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function() {
   </div>
 </div>
 
-<div style="page-break-after: always;"></div>
 
 
 
@@ -93,31 +92,49 @@ Evaluate the limit and justify each step by indicating the appropriate Limit Law
 ## Ans1
 
 1. 
-$$
+$
 \begin{aligned}
-\lim_{x \to -3} (2x^3 + 6x^2 - 9) 
+&\lim_{x \to -3} (2x^3 + 6x^2 - 9) \\
 &= \lim_{x \to -3} (2x^3) + \lim_{x \to -3} (6x^2) - \lim_{x \to -3} (9) && \text{(Sum/Difference Law)} \\
 &= 2 \lim_{x \to -3} (x^3) + 6 \lim_{x \to -3} (x^2) - \lim_{x \to -3} (9) && \text{(Constant Multiple Law)} \\
-&= 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power \& Constant Law)} \\
+&= 2(\lim_{x \to -3}x)^3+6(\lim_{x \to -3}x)^2-(\lim_{x \to -3}9) && \text{(Power Law)}\\
+&= 2(-3)^3 + 6(-3)^2 - 9 && \text{(Appendix A 8,10)} \\
 &= 2(-27) + 6(9) - 9 \\
 &= -54 + 54 - 9 \\
 &= -9
 \end{aligned}
-$$
+$
 
-2.
+2. 
+$
+\begin{aligned}
+&\lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)} \\
+&= \sqrt[3] {\lim_{x \to 3}(x+5)} \times \lim_{x \to 3}(2x^2-3x) &&\text{(Root / Product Law)}\\
+&= \sqrt[3] {\lim_{x \to 3}(x+5)} \times (2\lim_{x \to 3}x^2 - 3\lim_{x \to 3}x) &&\text{(Sum / Difference / Constant Multiple Law)}\\
+&= \sqrt[3]8 \times (2 \times 3^2-3\times3) &&\text{(Power Law)}\\
+&= 2 \times 9\\
+&=18
+\end{aligned}
+$
+
+---
 
 ## Q2
 Evaluate the limit, if it exists.
 1. $\lim_{x \to -2}(3x-7)$
-2. $\lim_{t^2-2t}(t-4)$
+2. $\lim_{t^2-2t-8}(t-4)$
 3. $\lim_{x \to 2}\frac{2-x}{\sqrt{x+2}-2}$
 4. $\lim_{x \to 3} \frac{\frac{1}{x} - \frac{1}{3}}{x-3}$
 ## Ans2
 
+1. Because $3x-7$ is a continuous function, which means $\lim_{x \to 2}3x-7 = 3\times 2-7(\text{continuous definition:}\lim_{x \to a}f(x) = f(a))$,so we can find out that the limit is $-1$
+2. The limit expression is mathematically ill-defined. The notation below $\lim$ ,which is $t^2-2t-8$,is not a valid convergence condition. It fails to specify the value that the variable t is approaching (ex:$t \to 4$). Without this "target point," the limit cannot be calculated, so this problem has no solution.
+3. 
+
+
+
 ---
  
-\\= 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power Law \& Constant Law)}
 ## Q3
 
 ## Ans3
@@ -284,6 +301,10 @@ The graph of a function f is given.
 5. Quotient Law ()
 6. Power Law ()
 7. Root Law ()
+8. $\lim_{x\to a}c = c \text{(c為常數)}$
+9. $\lim_{x \to a}x = a$
+10. $\lim_{x \to a}x^n = a^n$
+11. $\lim_{x \to a}\sqrt[n]x = \sqrt[n]a$
 
 ## Appendix B
 
