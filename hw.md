@@ -95,31 +95,29 @@ Evaluate the limit and justify each step by indicating the appropriate Limit Law
 1. 
 $$
 \begin{aligned}
-& \lim_{x \to -3} (2x^3 + 6x^2 - 9) \\
-& = \lim_{x \to -3} (2x^3) + \lim_{x \to -3} (6x^2) - \lim_{x \to -3} (9) && \text{(Sum/Difference Law)} \\
-& = 2 \lim_{x \to -3} (x^3) + 6 \lim_{x \to -3} (x^2) - \lim_{x \to -3} (9) && \text{(Constant Multiple Law)} \\
-& = 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power Law \& Constant Law)} \\
-& = 2(-27) + 6(9) - 9 \\
-& = -54 + 54 - 9 \\
-& = -9
+\lim_{x \to -3} (2x^3 + 6x^2 - 9) 
+&= \lim_{x \to -3} (2x^3) + \lim_{x \to -3} (6x^2) - \lim_{x \to -3} (9) && \text{(Sum/Difference Law)} \\
+&= 2 \lim_{x \to -3} (x^3) + 6 \lim_{x \to -3} (x^2) - \lim_{x \to -3} (9) && \text{(Constant Multiple Law)} \\
+&= 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power \& Constant Law)} \\
+&= 2(-27) + 6(9) - 9 \\
+&= -54 + 54 - 9 \\
+&= -9
 \end{aligned}
 $$
 
-2. 
-$$
-\begin{aligned}
-& \lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)}\\
-&=  \lim_{x \to 3}\sqrt[3]{x+5}\times \lim_{x\to 3}{(2x^2-3x)} && \text{(Product Law)}\\
-
-\end{aligned}
-$$
+2.
 
 ## Q2
-
+Evaluate the limit, if it exists.
+1. $\lim_{x \to -2}(3x-7)$
+2. $\lim_{t^2-2t}(t-4)$
+3. $\lim_{x \to 2}\frac{2-x}{\sqrt{x+2}-2}$
+4. $\lim_{x \to 3} \frac{\frac{1}{x} - \frac{1}{3}}{x-3}$
 ## Ans2
 
 ---
-
+ 
+\\= 2(-3)^3 + 6(-3)^2 - 9 && \text{(Power Law \& Constant Law)}
 ## Q3
 
 ## Ans3
@@ -156,13 +154,20 @@ $$
 # Basic Concepts for Continuity
 
 ## Q1
+Prove that f is continuous at a if and only if
+$$ \lim_{h \to 0} f(a + h) = f(a) $$
 
 ## Ans1
 
 ---
 
 ## Q2
+The graph of a function f is given.
+![](images/q2.png)
 
+1. At what numbers a does $\lim_{x \to a}f(x)$ not exist?
+2. At what numbers a is f not continuous?
+3. At what numbers a does  $\lim_{x \to a}f(x)$ exist but f is not continuous at a?
 ## Ans2
 
 ---
