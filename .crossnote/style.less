@@ -1,0 +1,75 @@
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+@import url('https://fonts.googleapis.com/css2?family=LXGW+WenKai+Mono+TC:wght@300;500&family=Open+Sans:wght@400;600&display=swap');
+
+@page {
+  margin-top: 1.7cm;    /* 內容頁的頂部邊距，您可以調整這個值 */
+  margin-bottom: 2cm;
+  margin-left: 2cm;
+  margin-right: 2cm;
+}
+
+.cover-page {
+  page-break-after: always;
+  text-align: center;
+  padding-top: 30vh; /* 這個置中樣式現在可以完美運作 */
+}
+
+.cover-main-title {
+  font-size: 58px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.5;
+}
+
+.cover-subtitle {
+  font-size: 34px;
+  color: #000000ff;
+  margin-bottom: 60px;
+  line-height: 1.6;
+}
+
+.cover-group {
+  font-size: 18px;
+  color: #00000000;
+  margin-bottom: 40px;
+}
+
+.cover-authors {
+  font-size: 24px;
+  color: #000000ff;
+  line-height: 2;
+}
+
+
+
+#test.markdown-preview {
+    /* 設定基礎字體 */
+    font-family: 'Open Sans', 'LXGW WenKai Mono TC';
+    color: black;
+
+    /* 
+     * 3. 專門設定內文段落的字體大小
+     *    這個規則現在的完整路徑是 #test.markdown-preview p，優先級很高。
+     */
+    p {
+      font-size: 18px; /* 試著用一個不同的值，確保能看到變化 */
+      line-height: 1.7; /* 建議同時調整行高，增加易讀性 */
+    }
+
+    /* 設定標題的字重 */
+    h1 {
+        font-weight: 570; /* Open Sans 的 600 是 Semi-bold */
+    } 
+    h2,
+    h3 {
+        font-weight: 550; /* LXGW 的 500 是 Medium */
+    }
+
+    /* 程式碼區塊也套用字體 */
+    pre,
+    code {
+      font-family: 'Open Sans';
+    }
+}
+

@@ -1,13 +1,14 @@
 ---
 puppeteer:
   format: "A4"
-  margin:
-    top: "2cm"
-    bottom: "2cm"
-  output:
-    pdf_document:
-      latex_engine: "pdflatex"
-  css: "./style.css"
+  
+  displayHeaderFooter: true
+  headerTemplate: ' '
+  footerTemplate: >
+    <div style="font-size: 14px; width: 100%; text-align: center; padding: 0 1cm;">
+      <span class="pageNumber"></span> / <span class="totalPages"></span>
+    </div>
+id: "test"
 ---
 <!DOCTYPE html>
 <html>
@@ -27,35 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
-<style>
-  .cover-page {
-    page-break-after: always;
-    text-align: center;
-    padding-top: 30vh;
-  }
-  .cover-main-title {
-    font-size: 48px;
-    font-weight: bold;
-    margin-bottom: 30px;
-    line-height: 1.5;
-  }
-  .cover-subtitle {
-    font-size: 24px;
-    color: #000000ff;
-    margin-bottom: 60px;
-    line-height: 1.6;
-  }
-  .cover-group {
-    font-size: 18px;
-    color: #00000000;
-    margin-bottom: 40px;
-  }
-  .cover-authors {
-    font-size: 18px;
-    color: #000000ff;
-    line-height: 2;
-  }
-</style>
 </head>
 <body>
 </body>
@@ -79,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     411485042 黃柏崴
   </div>
 </div>
-
 
 
 
@@ -204,7 +175,8 @@ $$
 
 ## Ans8
 
-***
+
+<!-- pagebreak -->
 
 # Basic Concepts for Continuity
 
@@ -245,11 +217,6 @@ From above, it have proven that if $\lim_{h \to 0} f(a + h) = f(a)$ is true, f i
 ### Conclusion
 Since we have proven the statement in both directions , we have successfully shown that a function f is continuous at a if and only if $\lim_{h \to 0} f(a + h) = f(a)$.
 
-
-
-
-
-
 ***
 
 ## Q2
@@ -257,14 +224,18 @@ The graph of a function f is given.
 ![](images/q2.png)
 
 1. At what numbers a does $\lim_{x \to a}f(x)$ not exist?
+
 2. At what numbers a is f not continuous?
+
 3. At what numbers a does  $\lim_{x \to a}f(x)$ exist but f is not continuous at a?
 
 ## Ans2
 * The criteria for limits, continuity, and differentiability can be found in Appendix B
 
 1. $x=1$, because $lim_{x\to 1-}f(x) \neq lim_{x\to 1+}f(x)$ 
+
 2. $x=3$, because $\lim_{x\to 3}f(x) \neq f(3)$
+
 3. $x=3$, according to Appendix B, although left-hand limit equals to right-hand limit and both exist(conditions for the existence of a limit), $\lim_{x\to 3}f(x) \neq f(3)$, from above we can know that $f$ is not continuous at $a$.
 
 ***
@@ -279,7 +250,9 @@ The graph of a function f is given.
 
 ## Ans4
 
-***
+
+
+<!-- pagebreak -->
 
 # Crystal Growth Inspection
 
@@ -318,7 +291,7 @@ The graph of a function f is given.
 ### 姓名： 胡庭睿
 ### 遇到的困難與挑戰：
 1. markdown轉pdf
-在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，再加上標題頁是用html寫的， 也意味著標題頁需要重寫
+在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced
 
 2. latex撰寫作業
 3. 全英文撰寫作業
@@ -385,35 +358,53 @@ The graph of a function f is given.
 ## Appendix A
 
 ### Limit Laws in class's slides:
-1. Sum Law (先加再微分 = 先各自微分再相加)
-2. Difference Law (先減再微分 = 先各自微分再相減)
-3. Constant Multiple Law (若函式可以提出一個常數，先將提出常數後的函數微分再與提出的常數相乘，結果等於原本函式的微分)
-4. Product Law (先乘再微分 = 先各自微分再相乘)
-5. Quotient Law ()
-6. Power Law ()
-7. Root Law ()
+1. Sum Law $\text{ (} \lim_{x \to a}(f(x)+g(x)) = \lim_{x \to a}f(x) + \lim_{x \to a}g(x) \text{)}$
+
+2. Difference Law $\text{ (} \lim_{x \to a}(f(x)-g(x)) = \lim_{x \to a}f(x) - \lim_{x \to a}g(x) \text{)}$
+
+3. Constant Multiple Law $\text{ (} \lim_{x \to a}cf(x) = c\times \lim_{x \to a}f(x) \text{)}$
+
+4. Product Law $\text{ (} \lim_{x \to a}(f(x)g(x)) = \lim_{x \to a}f(x) \times \lim_{x \to a}g(x) \text{)}$
+
+5. Quotient Law $\text{ (} \lim_{x\to a}\frac{f(x)}{g(x)}=\frac{\lim_{x\to a}f(x)}{\lim_{x\to a}g(x)}\text{, if }\lim_{x\to a}g(x)\neq 0\text{)}$
+
+6. Power Law $\text{ (} \lim_{x \to a}(f(x)^n)) = (\lim_{x \to a}f(x))^n\text{)}$
+
+7. Root Law $\text{ (} \lim_{x \to a} \sqrt[n]{f(x)} = \sqrt[n]{\lim_{x \to a}f(x)} \text{)}$
+
 8. $\lim_{x\to a}c = c \text{  (c為常數)}$
+
 9. $\lim_{x \to a}x = a$
+
 10. $\lim_{x \to a}x^n = a^n$
+
 11. $\lim_{x \to a}\sqrt[n]{x} = \sqrt[n]{a}$
 
 ## Appendix B
 
 ### 極限存在條件
 1. $\lim_{x \to a-}f(x) $ 存在
+
 2. $\lim_{x \to a+}f(x) $ 存在
+
 3. $\lim_{x \to a-}f(x) = \lim_{x \to a+}f(x)$
 
 ### 在點a連續條件
 1. $f(a)$ 存在
+
 2. $\lim_{x \to a}f(x)$ 存在
+
 3. $\lim_{x \to a}f(x) = f(a)$
 
 ### 在點a可微分條件
 1. $f(a)$ 存在
+
 2. $f(x)$ is continuous at $a$
+
 3. $\lim_{x \to a-}\frac{f(x)-f(a)}{x-a}$ 存在
+
 4. $\lim_{x \to a+}\frac{f(x)-f(a)}{x-a}$ 存在
+
 5. $\lim_{x \to a-}\frac{f(x)-f(a)}{x-a} = \lim_{x \to a+}\frac{f(x)-f(a)}{x-a} $ 
 
 ### 三者關係
