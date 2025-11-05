@@ -136,12 +136,40 @@ Evaluate the limit, if it exists.
 
 2. The limit expression is mathematically ill-defined. The notation below $\lim$ ,which is $t^2-2t-8$,is not a valid convergence condition. It fails to specify the value that the variable t is approaching (ex:$t \to 4$). Without this "target point," the limit cannot be calculated, so this problem has no solution.
 
-3. 
+3. We cannot apply Quotient Law because the limit of the denominator is 0, so we need to perform algebraic simplification on the expression first.
+$$
+\begin{aligned}
+&\lim_{x \to 2}\frac{2-x}{\sqrt{x+2}-2} \times \frac{\sqrt{x+2}+2}{\sqrt{x+2}+2} \\
+&= \lim_{x \to 2}\frac{(2-x)(\sqrt{x+2}+2)}{(\sqrt{x+2})^2-4} \\
+&= \lim_{x \to 2}\frac{(2-x)(\sqrt{x+2}+2)}{x+2-4} \\
+&= \lim_{x \to 2}\frac{(2-x)(\sqrt{x+2}+2)}{x-2} \\
+&= \lim_{x \to 2}\frac{-(x-2)(\sqrt{x+2}+2)}{x-2} && \text{(Cancel x-2)}\\
+&= \lim_{x \to 2}-(\sqrt{x+2}+2)  \\
+&= -(\sqrt{2+2}+2) \\
+&= -(2+2) \\
+&= -4
+\end{aligned}
+$$
+
+
+4. Same as the last question, because the limit of the denominator is 0, so we need to perform algebraic simplification on the expression first.
+
+$$
+\begin{aligned}
+&\lim_{x \to 3} \frac{\frac{1}{x} - \frac{1}{3}}{x-3} \times \frac{x+3}{x+3}\\
+&= \lim_{x \to 3}\frac{\frac{3}{x}-\frac{x}{3}}{x^2-9}\\
+&= \lim_{x \to 3}\frac{\frac{1}{3x}(9-x^2)}{x^2-9} &&\text{(Cancel } x^2-9 \text{)}\\
+&= \lim_{x \to 3} \frac{1}{3x}\times-1 \\
+&= \frac{1}{9}\times -1\\
+&= \frac{-1}{9}
+\end{aligned}
+$$
 
 
 
 ***
  
+
 ## Q3
 
 ## Ans3
@@ -181,10 +209,41 @@ Evaluate the limit, if it exists.
 # Basic Concepts for Continuity
 
 ## Q1
-Prove that f is continuous at a if and only if
+Prove that $f$ is continuous at $a$ if and only if
 $$ \lim_{h \to 0} f(a + h) = f(a) $$
 
 ## Ans1
+Prove: $f$ is continuous at $a$  $\iff \lim_{h \to 0} f(a + h) = f(a)$
+
+From class's slides, we know that the definition of continuous is $\lim_{x \to a}f(x) = f(a)$
+
+### Part 1 : Foward direction's proof
+Assume f is continuous at a, we know by the definition of continuous $\lim_{x \to a}f(x) = f(a)$.
+
+Define a variable h , and set $x = a + h$, when $x$ $\to$ $a$, $h \to 0$
+
+Now we can replace $x$ with $a+h$ and the limit condition $x \to a$ with $h \to 0$
+$$\lim_{h \to 0}f(a+h) = f(a)$$
+
+From above, it have proven that if $f$ is continuous at $a$, then the given limit expression holds true.
+
+### Part 2 : Reverse direction's proof
+
+Assume $\lim_{h \to 0} f(a + h) = f(a)$, and we want to prove f is continuous at a
+
+According to above, we define $x = a+h$, which means $h = x-a$
+
+As $h \to 0$, the value of $x$$\text{(a+h)}$ must approach $a+0$, so we can know as $h \to 0$,then $x \to a$
+
+Now we can replace $h$ with $x-a$ and the limit condition $h \to 0$ with $x \to a$
+  $$ \lim_{x \to a} f(a + (x - a)) = f(a) $$
+After simplify:
+$$ \lim_{x \to a} f(x) = f(a) $$
+
+
+
+
+
 
 ***
 
@@ -237,7 +296,7 @@ The graph of a function f is given.
 | 學號/姓名 | 分配項目（寫） | 分配項目（檢查） |
 | --- | --- | --- |
 | 411485002 楊昕展 |   |   |
-| 411485003 胡庭睿 |   |   |
+| 411485003 胡庭睿 | part 1:1,2 part 2:1,2 |   |
 | 411485018 蘇星丞 |   |   |
 | 411485042 黃柏崴 |   |   |
 
@@ -319,7 +378,7 @@ The graph of a function f is given.
 5. Quotient Law ()
 6. Power Law ()
 7. Root Law ()
-8. $\lim_{x\to a}c = c \text{(c為常數)}$
+8. $\lim_{x\to a}c = c \text{  (c為常數)}$
 9. $\lim_{x \to a}x = a$
 10. $\lim_{x \to a}x^n = a^n$
 11. $\lim_{x \to a}\sqrt[n]{x} = \sqrt[n]{a}$
