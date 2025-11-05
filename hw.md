@@ -240,6 +240,11 @@ Now we can replace $h$ with $x-a$ and the limit condition $h \to 0$ with $x \to 
 After simplify:
 $$ \lim_{x \to a} f(x) = f(a) $$
 
+From above, it have proven that if $\lim_{h \to 0} f(a + h) = f(a)$ is true, f is continuous at a.
+
+### Conclusion
+Since we have proven the statement in both directions , we have successfully shown that a function f is continuous at a if and only if $\lim_{h \to 0} f(a + h) = f(a)$.
+
 
 
 
@@ -256,6 +261,11 @@ The graph of a function f is given.
 3. At what numbers a does  $\lim_{x \to a}f(x)$ exist but f is not continuous at a?
 
 ## Ans2
+* The criteria for limits, continuity, and differentiability can be found in Appendix B
+
+1. $x=1$, because $lim_{x\to 1-}f(x) \neq lim_{x\to 1+}f(x)$ 
+2. $x=3$, because $\lim_{x\to 3}f(x) \neq f(3)$
+3. $x=3$, according to Appendix B, although left-hand limit equals to right-hand limit and both exist(conditions for the existence of a limit), $\lim_{x\to 3}f(x) \neq f(3)$, from above we can know that $f$ is not continuous at $a$.
 
 ***
 
@@ -296,7 +306,7 @@ The graph of a function f is given.
 | 學號/姓名 | 分配項目（寫） | 分配項目（檢查） |
 | --- | --- | --- |
 | 411485002 楊昕展 |   |   |
-| 411485003 胡庭睿 | part 1:1,2 part 2:1,2 |   |
+| 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
 | 411485018 蘇星丞 |   |   |
 | 411485042 黃柏崴 |   |   |
 
@@ -305,9 +315,13 @@ The graph of a function f is given.
 
 此處由每位成員報告在擔任實作者或審核者時遇到的挑戰或未解決的問題，包含未來工作
  
-### 姓名： 
+### 姓名： 胡庭睿
 ### 遇到的困難與挑戰：
+1. markdown轉pdf
+在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，再加上標題頁是用html寫的， 也意味著標題頁需要重寫
 
+2. latex撰寫作業
+3. 全英文撰寫作業
 ***
 
 ### 姓名： 
@@ -335,7 +349,7 @@ The graph of a function f is given.
 
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
-| [姓名1] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
+| 胡庭睿 | 15hr | 1. part 1:1,2<br> 2. part 2:1,2<br> 3. Appendix A,B<br> 4. the homework template<br> 5. git and github tutorial<br>6. find ways of converting markdown to pdf |
 | [姓名2] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
 | ... | ... | ... | ... |
 
@@ -385,4 +399,23 @@ The graph of a function f is given.
 
 ## Appendix B
 
+### 極限存在條件
+1. $\lim_{x \to a-}f(x) $ 存在
+2. $\lim_{x \to a+}f(x) $ 存在
+3. $\lim_{x \to a-}f(x) = \lim_{x \to a+}f(x)$
+
+### 在點a連續條件
+1. $f(a)$ 存在
+2. $\lim_{x \to a}f(x)$ 存在
+3. $\lim_{x \to a}f(x) = f(a)$
+
+### 在點a可微分條件
+1. $f(a)$ 存在
+2. $f(x)$ is continuous at $a$
+3. $\lim_{x \to a-}\frac{f(x)-f(a)}{x-a}$ 存在
+4. $\lim_{x \to a+}\frac{f(x)-f(a)}{x-a}$ 存在
+5. $\lim_{x \to a-}\frac{f(x)-f(a)}{x-a} = \lim_{x \to a+}\frac{f(x)-f(a)}{x-a} $ 
+
+### 三者關係
+可微分一定連續，若連續，極限一定存在
 ## Appendix C
