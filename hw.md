@@ -301,10 +301,8 @@ The graph of a function f is given.
 
 
 # Challenges and Difficulties
-
-此處由每位成員報告在擔任實作者或審核者時遇到的挑戰或未解決的問題，包含未來工作
  
-### 姓名： 胡庭睿
+### 姓名：胡庭睿
 ### 遇到的困難與挑戰：
 1. markdown轉pdf
 在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced
@@ -348,7 +346,7 @@ The graph of a function f is given.
 ### 學號：
 ### 姓名：
 ### 心得：
-（應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
+
 
 ***
 
