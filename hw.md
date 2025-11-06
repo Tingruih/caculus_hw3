@@ -182,38 +182,27 @@ plug in line L which gives us the equation equation$(1-\frac{2}{r})k =-r$ then s
 
 $$\lim_{r \to 0^+}k = \lim_{r \to 0^+}-\frac{r^2}{r-2} = 0$$
 so as $r \to 0^+$ $\hspace{0.5cm}$ $R(k,0)\to (0,0)$
-
-
-
 ***
-
+ 
 ## Q5
-Use the given graph of $f$ to find a number $\delta$ such that:
+Use the given graph of $f$ to find a number $\delta$ such that: $0 < |x - 3| < \delta\implies|f(x) - 2| < 0.5$
 
-- $0 < |x - 3| < \delta$ implies $|f(x) - 2| < 0.5$
-
-$$
-0 < |x - 3| < \delta \implies |f(x) - 2| < 0.5
-$$
 
 ![Graph for Q5](images/q4.jpeg)
-
-
 ## Ans5
 $$
 \begin{aligned}
 &|f(x)-2| < 0.5\\
-&1.5 < f(x) < 2.5\
+&1.5 < f(x) < 2.5\\
 &f(x)=1.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 2.6\\
 &f(x)=2.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 3.8\\
+&\text{so when $x \in(2.6,3.8)$ then the inequality $|f(x) - 2| < 0.5$ will be satisfied}\\
+&\text{Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
+This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
+Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.}
+good
 \end{aligned}
 $$
-so when $x \in(2.6,3.8)$ then the inequality $|f(x) - 2| < 0.5$ will be satisfied
-Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
-This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
-Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.
-
-
 ***
 
 ## Q6
@@ -298,7 +287,9 @@ The graph of a function f is given.
 ***
 
 ## Q3
-
+ Use the definition of continuity and the properties of limits to show that the function is
+ continuous at the given number a.
+ 
 ## Ans3
 
 ***
@@ -307,6 +298,7 @@ The graph of a function f is given.
 
 ## Ans4
 
+fdsfgfwrerfgd
 
 
 <!-- pagebreak -->
@@ -342,8 +334,10 @@ The graph of a function f is given.
 
 
 # Challenges and Difficulties
+
+此處由每位成員報告在擔任實作者或審核者時遇到的挑戰或未解決的問題，包含未來工作
  
-### 姓名：胡庭睿
+### 姓名： 胡庭睿
 ### 遇到的困難與挑戰：
 1. markdown轉pdf
 在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced
@@ -387,7 +381,7 @@ The graph of a function f is given.
 ### 學號：
 ### 姓名：
 ### 心得：
-
+（應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
 
 ***
 
