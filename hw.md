@@ -197,7 +197,22 @@ $$
 $$
 
 ![Graph for Q5](images/q4.jpeg)
+
+
 ## Ans5
+$$
+\begin{aligned}
+&|f(x)-2| < 0.5\\
+&1.5 < f(x) < 2.5\
+&f(x)=1.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 2.6\\
+&f(x)=2.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 3.8\\
+\end{aligned}
+$$
+so when $x \in(2.6,3.8)$ then the inequality $|f(x) - 2| < 0.5$ will be satisfied
+Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
+This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
+Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.
+
 
 ***
 
