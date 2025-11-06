@@ -287,8 +287,7 @@ The graph of a function f is given.
 ***
 
 ## Q3
- Use the definition of continuity and the properties of limits to show that the function is
- continuous at the given number a.
+ Use the definition of continuity and the properties of limits to show that the function is continuous at the given number a.
  
 ## Ans3
 
@@ -298,7 +297,7 @@ The graph of a function f is given.
 
 ## Ans4
 
-fdsfgfwrerfgd
+
 
 
 <!-- pagebreak -->
