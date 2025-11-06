@@ -142,13 +142,29 @@ $$
  
 
 ## Q3
-
+Use Squeeze Theeorom to show that 
+$$\lim_{x \to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}$$
 ## Ans3
+$$ -1\leq\sin{\frac{\pi}{x}}\leq1\\$$
+$$-\sqrt{x^3+x^2}\leq\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}\leq\sqrt{x^3+x^2}$$
+$$\lim_{x\to 0}-\sqrt{x^3+x^2}\leq\lim_{x\to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}\leq\lim_{x\to0}\sqrt{x^3+x^2}$$
+$$0\leq\lim_{x\to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}\leq0$$
+$$\lim_{x\to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}} = 0$$
+
 
 ***
 
 ## Q4
+ The figure shows:
+- A fixed circle $C_1$ with equation $$(x-1)^2 + y^2 = 1$$
+- A shrinking circle $C_2$ centered at the origin with radius $r$
+- Point $P(0,r)$
+- Point $Q$ is the upper intersection point of the two circles
+- Point $R$ is where line $PQ$ intersects the x-axis
 
+What happens to point $R$ as circle $C_2$ shrinks (as $r \to 0^+$)?
+
+![Circle Intersection Problem](images/q3.jpeg)
 ## Ans4
 
 ***
