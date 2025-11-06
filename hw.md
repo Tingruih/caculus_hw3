@@ -155,9 +155,7 @@ $$\lim_{x\to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}} = 0$$
 ***
 
 ## Q4
- The figure shows:
-- A fixed circle $C_1$ with equation $$(x-1)^2 + y^2 = 1$$
-- A shrinking circle $C_2$ centered at the origin with radius $r$
+ The figure shows a fixed circle $C_1$ with equation $(x-1)^2 + y^2 = 1$ and a shrinking circle $C_2$ with radius $r$ and centering the origin
 - Point $P(0,r)$
 - Point $Q$ is the upper intersection point of the two circles
 - Point $R$ is where line $PQ$ intersects the x-axis
@@ -168,23 +166,25 @@ What happens to point $R$ as circle $C_2$ shrinks (as $r \to 0^+$)?
 ## Ans4
 $$
 \begin{aligned}
-&x^2+y^2=r^2&&\text{(1)}\\
-&(x-1)^2+y^2=1&&\text{(2)}\\
-&\text{(1) - (2)}\\
-&2x-1=r^2-1\\
+&x^2+y^2=r^2 \hspace{1cm} \text{(1)} \\
+&(x-1)^2+y^2=1 \hspace{1cm} \text{(2)} \\
+&\text{(1) - (2) cancel } y^2\\
+&=2x-1=r^2-1\\
 &x=\frac{r^2}{2}\hspace{1cm}y=\frac{r^2}{2}\\
 &Q(x, y)=(\frac{r^2}{2}, \frac{r^2}{2})\\
 &P(0,r)\\
-&\text{find the slope  $m_{\overline{PQ}} = 1-\frac{2}{r}$}\\
-&\text{use P to find the equation of the line $L_{\overline{PQ}}=(1-\frac{2}{r})x =(y-r) $}\\
-&\text{so R is fix on x axias and to find R we suppose $R=R(k,0)$ plug in line L which gives us the equation$(1-\frac{2}{r})k =-r$}\\
-&\text{plug in line L which gives us the equation$(1-\frac{2}{r})k =-r$,\hspace{0.1cm}}
-\text{then simplify the equation and we will get the new equation $k=-\frac{r^2}{r-2}$}\\
-&\lim_{r \to 0^+}k = \lim_{r \to 0^+}-\frac{r^2}{r-2} = 0\\
-&\text{so as $r \to 0^+\hspace{0.5cm}R(k,0)\to (0,0)$}
-
 \end{aligned}
 $$
+Find the slope $m_{\overline{PQ}} = 1-\frac{2}{r}$ 
+Use P to find the equation of the line $L_{\overline{PQ}}=(1-\frac{2}{r})x =(y-r) $
+so $R$ is fix on $x$ axias and to find $R$ we assume $R=R(k,0)$ 
+plug in line L which gives us the equation equation$(1-\frac{2}{r})k =-r$ then simplify the equation and we will get the new equation $k = - \frac{r^2}{r-2}$
+
+$$\lim_{r \to 0^+}k = \lim_{r \to 0^+}-\frac{r^2}{r-2} = 0$$
+so as $r \to 0^+$ $\hspace{0.5cm}$ $R(k,0)\to (0,0)$
+
+
+
 ***
 
 ## Q5
