@@ -166,11 +166,37 @@ What happens to point $R$ as circle $C_2$ shrinks (as $r \to 0^+$)?
 
 ![Circle Intersection Problem](images/q3.jpeg)
 ## Ans4
+$$
+\begin{aligned}
+&x^2+y^2=r^2&&\text{(1)}\\
+&(x-1)^2+y^2=1&&\text{(2)}\\
+&\text{(1) - (2)}\\
+&2x-1=r^2-1\\
+&x=\frac{r^2}{2}\hspace{1cm}y=\frac{r^2}{2}\\
+&Q(x, y)=(\frac{r^2}{2}, \frac{r^2}{2})\\
+&P(0,r)\\
+&\text{find the slope  $m_{\overline{PQ}} = 1-\frac{2}{r}$}\\
+&\text{use P to find the equation of the line $L_{\overline{PQ}}=(1-\frac{2}{r})x =(y-r) $}\\
+&\text{so R is fix on x axias and to find R we suppose $R=R(k,0)$ plug in line L which gives us the equation$(1-\frac{2}{r})k =-r$}\\
+&\text{plug in line L which gives us the equation$(1-\frac{2}{r})k =-r$,\hspace{0.1cm}}
+\text{then simplify the equation and we will get the new equation $k=-\frac{r^2}{r-2}$}\\
+&\lim_{r \to 0^+}k = \lim_{r \to 0^+}-\frac{r^2}{r-2} = 0\\
+&\text{so as $r \to 0^+\hspace{0.5cm}R(k,0)\to (0,0)$}
 
+\end{aligned}
+$$
 ***
 
 ## Q5
+Use the given graph of $f$ to find a number $\delta$ such that:
 
+- $0 < |x - 3| < \delta$ implies $|f(x) - 2| < 0.5$
+
+$$
+0 < |x - 3| < \delta \implies |f(x) - 2| < 0.5
+$$
+
+![Graph for Q5](images/q4.jpeg)
 ## Ans5
 
 ***
