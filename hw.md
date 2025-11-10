@@ -373,19 +373,25 @@ The graph of a function f is given.
 
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
-| 胡庭睿 | 18hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)||
+| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)||
 | [姓名2] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
+| ... | ... | ... | ... |
 | ... | ... | ... | ... |
 
 
 # Reflection
+```
+（應包含在作業中學習到的知識點，個人和小組整題的學習，團隊工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
+```
 
 ### 學號：411485003
 ### 姓名：胡庭睿
 ### 心得：
-（應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
-這次作業的時間點剛好在作業一的成績發佈之後，
+這次作業的時間點剛好在作業一的成績發佈之後，老師對作業的layouts, writing styles,reflection and team's distribution to the work也變得更清楚，為了更好的統一writing styles，首先我根據作業二用markdown混合latex的方式撰寫了修正過後的模板，不僅能夠統一組員的writing styles也可以更貼近老師的要求，再來用markdown + latex的好處是不用碰觸到latex排版，同時也能學習如何用latex的語法寫數學公式，最後則是處理上次作業中提及的共編問題，我寫了教學git 和 github的教學文檔，教了組員們必要的git知識，即使還是遇到了常見的版本衝突問題，花了一段時間才解決，但是我也同樣學到了許多。
 
+從這次的作業中，我個人學到了許多關於安排教學進度和教學組員的技巧，在這之前，我比較不擅長表達自己的想法，就只是做好別人指派給我的工作，但是在與組員交流過後，我發現組員也和我很像，但是這樣作業會開天窗，所以我想要先試著改變自己，
+
+團隊工作風格的部分
 ***
 
 ### 學號：
