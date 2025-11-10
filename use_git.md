@@ -33,6 +33,7 @@ solution:
 git add .
 git commit -m "?"
 git pull --rebase  # 或 git pull --no-rebase
+輸入完後會進到vim，按一下esc,輸入:wq,然後enter就行了
 ```
 
 放棄本地修改，直接用遠端repo的
