@@ -21,8 +21,8 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     
     # Plot horizontal lines as epsilon bounds
     # TODO: modify y_high and y_low to plot the correct lines
-    y_high = target_temperature
-    y_low = target_temperature
+    y_high = target_temperature + eps
+    y_low = target_temperature - eps
     plt.axhline(y=y_high, color='red', linestyle='-', label='eps bounds')
     plt.axhline(y=y_low, color='red', linestyle='-')
     plt.vlines(target_power, y_low, y_high, color='red', linestyle='dashed')
@@ -36,6 +36,7 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     # TODO: modify x_left and x_right to plot the correct lines
     x_left = target_power
     x_right = target_power
+    delta = max(abs(target_power - lower_power), abs(higher_power ))
     plt.axvline(x=x_left, color='blue', linestyle='-', label='delta bounds')
     plt.axvline(x=x_right, color='blue', linestyle='-')
     plt.hlines(target_temperature, x_left, x_right, color='blue', linestyle='dashed')
