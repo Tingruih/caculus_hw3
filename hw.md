@@ -468,5 +468,3 @@ The graph of a function f is given.
 ### 三者關係
 可微分一定連續，若連續，極限一定存在
 ## Appendix C
-
-ddss
