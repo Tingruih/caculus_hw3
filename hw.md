@@ -78,7 +78,6 @@ $$
 $$
 
 2. 
-
 $$
 \begin{aligned}
 &\lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)} \\
@@ -293,15 +292,15 @@ Use the definition of continuity and the properties of limits to show that the f
  2. $p(v) = 2\sqrt{3v^2+1}, a = 1$
  
 ## Ans3
+
+
 So the definition of continuity at a certain point is consisted of three parts:
 
-$$
-\begin{align*}
-&\textbf{(1) The limit of the function at the point exists:} &\quad \lim_{x \to a} f(x) \text{ exists} \\
-&\textbf{(2) The value of the function at the point exists:} &\quad f(a) \text{ is defined} \\
-&\textbf{(3) The limit equals the function value:} &\quad \lim_{x \to a} f(x) = f(a)
-\end{align*}
-$$
+
+(1): The limit of the function at the point exists: $\lim_{x \to a} f(x) \text{ exists}$
+(2): The value of the function at the point exists: $f(a) \text{ is defined}$
+(3): The limit equals the function value: $lim_{x \to a} f(x) = f(a)$
+
 <hr>
 
 1. 
@@ -315,8 +314,7 @@ $$
 $$
 
 
-2.
-
+2. 
 $$
 \begin{aligned}
 &\lim_{v \to 1}p(v)=4\\
@@ -387,9 +385,9 @@ $$
 
 ### 姓名： 蘇星丞
 ### 遇到的困難與挑戰：
-1. git的問題<br>
+1. git的問題
 git是我這次作業第一次用，其中碰到了很多問題像是版本衝突、不會用終端機、指令不太熟悉。有一次版本衝突時我不知道他到底出了甚麼問題，他也沒有問我要不要覆寫或修改之類的，然後又不知道他的錯誤訊息到底甚麼意思，所以很著急，好在之後他跳出警示框讓我直接覆寫那段程式不然我也沒辦法自己處理，中間有問了同組的成員及AI，學到了本來不會學到的知識，之後我也有去提升我對git的認識，這讓我在操作git和處理問題上有更多的知識，不會的地方也比較明顯，讓我有辦法找尋相關的資源。
-2. markdown跟latex<br>
+2. markdown跟latex
 這次寫作業都是用markdown和latex寫，這和之前用的工具截然不同，一方面覺得數學是啊，那些專業或不常見的表達方式可以更直觀的表達出來，另一方面覺得設計跟排版的部分特別的麻煩跟困難，所以排版的公式我都請AI跟我講，雖然還是排的不怎麼樣，但是至少比一開始好多了。
 
 ***
@@ -441,7 +439,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 學號：411485018
 ### 姓名：蘇星丞
 ### 心得：
-我覺得這次寫作業我學到很多新的東西跟知識，項如何打文法跟如何用git，我花了一些時間學習，也逐漸理解我們的模板是怎麼用這個語法寫的跟如何轉成PDF，相信再過一陣子可以完全理解她在幹嘛，讓我也有機會自己用用看那些設定之類的。另外也學會如何跟組員合作與協調，之前我都比較做自己的部分，但我逐漸開始會問問其他人像是怎麼做或要如何整合之類的，這讓我也有機會練習如何與其他人合作。下次希望可以有辦法自己調整排版或字體，也希望能聊解我們的PDF是怎麼從程式碼變出來的，還有希望下次能用git的其他功能像是branch，這讓我們能用更明瞭的方法寫功課。
+我覺得這次寫作業我學到很多新的東西跟知識，像如何打文法跟如何用git，我花了一些時間學習，也逐漸理解我們的模板是怎麼用這個語法寫的跟如何轉成PDF，相信再過一陣子可以完全理解她在幹嘛，讓我也有機會自己用用看那些設定之類的。另外也學會如何跟組員合作與協調，之前我都比較做自己的部分，但我逐漸開始會問問其他人像是怎麼做或要如何整合之類的，這讓我也有機會練習如何與其他人合作。下次希望可以有辦法自己調整排版或字體，也希望能了解我們的PDF是怎麼從程式碼變出來的，還有希望下次能用git的其他功能像是branch，這讓我們能用更明瞭的方法寫功課。
 
 ***
 
