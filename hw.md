@@ -363,7 +363,7 @@ $$
 | --- | --- | --- |
 | 411485002 楊昕展 |   |   |
 | 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
-| 411485018 蘇星丞 |   |   |
+| 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
 | 411485042 黃柏崴 |   |   |
 
 
@@ -385,8 +385,12 @@ $$
 
 ***
 
-### 姓名： 
+### 姓名： 蘇星丞
 ### 遇到的困難與挑戰：
+1. git的問題<br>
+git是我這次作業第一次用，其中碰到了很多問題像是版本衝突、不會用終端機、指令不太熟悉。有一次版本衝突時我不知道他到底出了甚麼問題，他也沒有問我要不要覆寫或修改之類的，然後又不知道他的錯誤訊息到底甚麼意思，所以很著急，好在之後他跳出警示框讓我直接覆寫那段程式不然我也沒辦法自己處理，中間有問了同組的成員及AI，學到了本來不會學到的知識，之後我也有去提升我對git的認識，這讓我在操作git和處理問題上有更多的知識，不會的地方也比較明顯，讓我有辦法找尋相關的資源。
+2. markdown跟latex<br>
+這次寫作業都是用markdown和latex寫，這和之前用的工具截然不同，一方面覺得數學是啊，那些專業或不常見的表達方式可以更直觀的表達出來，另一方面覺得設計跟排版的部分特別的麻煩跟困難，所以排版的公式我都請AI跟我講，雖然還是排的不怎麼樣，但是至少比一開始好多了。
 
 ***
 
@@ -411,7 +415,7 @@ $$
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
 | 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)| |
-| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)||
+| 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
 | [姓名2] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
 | ... | ... | ... | ... |
 | ... | ... | ... | ... |
@@ -434,9 +438,10 @@ $$
 
 ***
 
-### 學號：
-### 姓名：
+### 學號：411485018
+### 姓名：蘇星丞
 ### 心得：
+
 
 ***
 
