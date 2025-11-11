@@ -142,7 +142,7 @@ $$
  
 
 ## Q3
-Use Squeeze Theorem to show that 
+Use Squeeze Theorom to show that 
 $$\lim_{x \to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}$$
 ## Ans3
 $$ -1\leq\sin{\frac{\pi}{x}}\leq1\\$$
@@ -345,6 +345,8 @@ $$
 
 # Crystal Growth Inspection
 
+## Crystal growth furnaces are used in research to determine how best to manufacture crystalsused in electronic components. For proper growth of a crystal, the temperature must becontrolled accurately by adjusting the input power. Suppose the relationship is given by $ T(w) = 0.1w ^ 2 +2.155w +20$ where T is the temperature in degrees Celsius and w is the power input in watts. 
+
 ## test_crystal_growth.py
 
 ```python
@@ -373,7 +375,6 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     #在點(x, y) = (target_power, target_temperature)上方 0.1 的地方寫出文字target_power(小數點後三位)並設定大小 9
     
     # Plot horizontal lines as epsilon bounds
-    # TODO: modify y_high and y_low to plot the correct lines
     y_high = target_temperature + eps
     y_low = target_temperature - eps # 溫度在 eps 範圍內的上下界
     plt.axhline(y=y_high, color='red', linestyle='-', label='eps bounds')
@@ -386,11 +387,12 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
             f"T = {target_temperature:.3f} - {eps:.3f}", color='red', fontsize=9, va='top')
     
     # Plot vertical lines as delta bounds
-    # TODO: modify x_left and x_right to plot the correct lines
     x_left = target_power
     x_right = target_power
     delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
     # 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
+    x_left = target_power - delta
+    x_right = target_power + delta # 算出 X 的左右範圍
     plt.axvline(x=x_left, color='blue', linestyle='-', label='delta bounds')
     plt.axvline(x=x_right, color='blue', linestyle='-')
     plt.hlines(target_temperature, x_left, x_right, color='blue', linestyle='dashed')
@@ -411,7 +413,6 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     plt.close()  # Close the figure to free memory
     
 # Solve powers
-# TODO: Report and explain the meaning of the solved powers
 target_temperature = 200
 eps = 1
 target_power = solve_power(target_temperature)
@@ -419,7 +420,6 @@ higher_power = solve_power(target_temperature+eps)
 lower_power = solve_power(target_temperature-eps)# 描寫溫度的誤差(eps)範圍
 
 delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
-# TODO: Update delta of the power so that the temperature is within an error tolerance epsilon = 1 at 200
 # Note: Please see the meanning of delta in the precise definition of the limit. 
 
 
@@ -440,7 +440,6 @@ import math
 
 def get_temperature(power):
     temperature = 0.1 * power ** 2 + 2.155 * power + 20 # 計算在 power 時的 T
-    # TODO: Compute the temperature according to the equation T(w) = 0.1w^2 + 2.155w + 20
     return temperature # 回傳 temperature
 
 def solve_power(temperature): # 從溫度反推功率
@@ -457,22 +456,44 @@ def solve_power(temperature): # 從溫度反推功率
         root2 = (-b - sqrt_d) / (2*a)
         power = max(root1, root2) # 取較大的值(正根)
 
-    #TODO: Solves the equation T(w) = 0.1w^2 + 2.155w + 20 for a given temperature.
     #Note: Only return the positive root
 
     return power
 ```
-1. 
+## Q1:
+How much power is needed to maintain the temperature at $ 200^\circ\mathrm{C}$ ?
+
+## Ans1:
 $ T(w)=0.1w^2+2.155w+20=200$
 $ \quad \Rightarrow \quad$
 $ 0.1w^2+2.155w+20-200=0\quad \Rightarrow \quad 0.1w^2+2.155w-180=0$
 
 $ w=\frac{-2.155\pm \sqrt{(2.155)^2-4\cdot 0.1\cdot (-180)}}{2\cdot 0.1}
 w=\frac{-2.155\pm \sqrt{4.646025+72}}{0.2}=\frac{-2.155\pm \sqrt{76.646025}}{0.2}
-w\approx \frac{-2.155\pm 8.756}{0.2} = 33.005 or -54.555$，取正，$ w = 33.005$
+w\approx \frac{-2.155\pm 8.756}{0.2} = 33.005 or -54.555$，take positive one，$ w = 33.005$
 
+***
+## Q2:
+If the temperature is allowed to vary from $ 200^\circ\mathrm{C}$ by up to $ ±1^\circ\mathrm{C}$ , what range of wattage is allowed for the input power?
 
-<!-- pagebreak -->
+## Ans2:
+when $ 199^\circ\mathrm{C}$
+
+$ 0.1w^2+2.155w+20=199\Rightarrow 0.1w^2+2.155w-179=0$
+
+Use the quadratic formula:
+
+$w=\frac{-2.155\pm \sqrt{(2.155)^2-4\cdot 0.1\cdot (-179)}}{2\cdot 0.1}$
+
+ $w\approx \frac{-2.155\pm \sqrt{4.646+71.6}}{0.2}=\frac{-2.155\pm \sqrt{76.246}}{0.2}$
+
+$ w\approx \frac{-2.155\pm 8.73}{0.2}\Rightarrow w_{\mathrm{low}}\approx 32.88$
+
+***
+## Q3:
+Draw the graph to illustrate the limit interms of the $\varepsilon , \delta $ definition of $ \lim _{x\rightarrow a}f(x)=L$ .
+
+## Ans3:
 
 
 
@@ -483,7 +504,7 @@ w\approx \frac{-2.155\pm 8.756}{0.2} = 33.005 or -54.555$，取正，$ w = 33.00
 | 411485002 楊昕展 |   |   |
 | 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
 | 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
-| 411485042 黃柏崴 | 程式部分  |   |
+| 411485042 黃柏崴 | 程式部分 |   |
 
 
 # Challenges and Difficulties
@@ -582,10 +603,8 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 姓名：
 ### 心得：
 
-
-<!-- pagebreak -->
-
 # Appendix
+
 
 ## Appendix A
 
