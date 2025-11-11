@@ -78,6 +78,7 @@ $$
 $$
 
 2. 
+
 $$
 \begin{aligned}
 &\lim_{x \to 3} \sqrt[3]{x + 5}{(2x^2 - 3x)} \\
@@ -200,7 +201,7 @@ $$
 &\text{Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
 This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
 Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.}
-
+good
 \end{aligned}
 $$
 ***
@@ -287,49 +288,9 @@ The graph of a function f is given.
 ***
 
 ## Q3
- Use the definition of continuity and the properties of limits to show that the function is
- continuous at the given number a.<br>
- 1. $f(x) = 3x^2+(x+2)^5, a = -1$
- 2. $p(v) = 2\sqrt{3v^2+1}, a = 1$
+ Use the definition of continuity and the properties of limits to show that the function is continuous at the given number a.
  
 ## Ans3
-so the definition of continuity at a certain point is consisted of three parts:<br>
-$$
-\begin{align*}
-&\textbf{(1) The limit of the function at the point exists:} &\quad \lim_{x \to a} f(x) \text{ exists} \\
-&\textbf{(2) The value of the function at the point exists:} &\quad f(a) \text{ is defined} \\
-&\textbf{(3) The limit equals the function value:} &\quad \lim_{x \to a} f(x) = f(a)
-\end{align*}
-$$
-<hr>
-
-1. 
-$$
-\begin{array}{l}
-\lim_{x \to -1} f(x) = 4 \\
-f(-1) = 4 \\
-\lim_{x \to -1} f(x) = f(-1) \\\\
-
-\textbf{Therefore, $f(x)$ is continuous at $x = -1$} 
-\end{array}
-$$
-
-
-
-
-<hr>
-2.
-
-$$
-\begin{array}{l}
-\lim_{v\to1}p(v)=4\\
-p(1) =4\\
-\lim_{v\to1}p(v)=p(1)\\\\
-\textbf{Therefore, $p(v)$ is continuous at $v = 1$} 
-
-\end{array}
-$$
-
 
 ***
 
@@ -337,7 +298,7 @@ $$
 
 ## Ans4
 
-fdsfgfwrerfgd
+
 
 
 <!-- pagebreak -->
@@ -379,10 +340,12 @@ fdsfgfwrerfgd
 ### 姓名： 胡庭睿
 ### 遇到的困難與挑戰：
 1. markdown轉pdf
-在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced
+在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex,basictex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced的extension,對latex公式有很好的支援度，字體以及版面等也都可以透過.less控制，有不錯的自訂度，只是文檔寫的不太詳細，花了我一點時間才解決，不過我也學到了許多。
 
 2. latex撰寫作業
+經過作業一的批改後，我更了解老師的評分標準，應該更詳細的列出思考以及計算過程，也代表用latex撰寫的佔比會更高，我學到了要打多行運算式時，可以用\begin{aligned} 和 \end{aligned}，用\begin{align}會讓每一行運算式後有編號，並且用&可以將算式對齊，在這次作業中也花了不少時間學習latex的語法。不過像part 1 ans 1中的公式，雖然可以使它們與第一行算式對齊，但是我並沒有辦法控制所有算式的位置是在中間還是左邊，寫的方式完全一樣，但是卻依然無法改善此問題，推測是markdown轉換為html時出錯。
 3. 全英文撰寫作業
+全英文撰寫作業是這次作業我給我自己的挑戰，我發現在上課的簡報中，太容易依賴翻譯去查詢那些數學專有名詞，寫上中文解釋後下次上課依然還是會忘記，真正用英文開始寫後，我發現有好多在數學算式中常用到的詞彙，像是假設(assume)，代數化簡(algebraic simplification)，function的定義錯誤(ill-definition)等，很多都是生活中常用到的單字但是會讓人想不到可以這樣運用，透過這次作業也讓我更熟悉這些數學的英文專有名詞，也期許自己能夠越來越熟悉，到最後可以能夠像母語一樣順利的運用。
 ***
 
 ### 姓名： 
@@ -410,18 +373,25 @@ fdsfgfwrerfgd
 
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
-| 胡庭睿 | 15hr | 1. part 1:1,2<br> 2. part 2:1,2<br> 3. Appendix A,B<br> 4. the homework template<br> 5. git and github tutorial<br>6. find ways of converting markdown to pdf |
+| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)||
 | [姓名2] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
+| ... | ... | ... | ... |
 | ... | ... | ... | ... |
 
 
 # Reflection
+```
+（應包含在作業中學習到的知識點，個人和小組整題的學習，團隊工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
+```
 
-### 學號：
-### 姓名：
+### 學號：411485003
+### 姓名：胡庭睿
 ### 心得：
-（應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
+這次作業的時間點剛好在作業一的成績發佈之後，老師對作業的layouts, writing styles,reflection and team's distribution to the work也變得更清楚，為了更好的統一writing styles，首先我根據作業二用markdown混合latex的方式撰寫了修正過後的模板，不僅能夠統一組員的writing styles也可以更貼近老師的要求，再來用markdown + latex的好處是不用碰觸到latex排版，同時也能學習如何用latex的語法寫數學公式，最後則是處理上次作業中提及的共編問題，我寫了教學git 和 github的教學文檔，教了組員們必要的git知識，即使還是遇到了常見的版本衝突問題，花了一段時間才解決，但是我也同樣學到了許多。
 
+從這次的作業中，我個人學到了許多關於安排教學進度和教學組員的技巧，在這之前，我比較不擅長表達自己的想法，就只是做好別人指派給我的工作，但是在與組員交流過後，我發現組員也和我很像，但是這樣作業會開天窗，所以我想要先試著改變自己，
+
+團隊工作風格的部分
 ***
 
 ### 學號：
