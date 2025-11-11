@@ -206,8 +206,16 @@ $$
 ***
 
 ## Q6
+Given $f(x) = \sqrt{x}$, find a number $\delta$ such that  
+if $|x - 4| < \delta$, then $|\sqrt{x} - 2| < 0.4$.  
+Explain the answer with a graph.
 
 ## Ans6
+![hw3-1-Q6-1.png](images/hw3-1-Q6-1.png)
+
+從圖中判斷，在P點的$x$時，與O點在y軸距為$\overline{BD} = 0.4$，與O點在x軸距約為$\overline{AE} = 2 - 1.029 = 0.971$，而Q點的$x$時與O點在y軸距也為$\overline{BC} = 0.4$，與O點在x軸距約為$\overline{AF} = 3.291 - 2 = 1.291$，然而我們求的$delta$是絕對值，即兩邊$\delta$與$x$的距離相等，那$\delta$要取$0.971$還是$1.291$呢?由於我們取極限是範圍要有多小有多小，並且$\sqrt{x}-2$範圍必在0.4內，如果取較大的，小的那邊可取的x會超過我們限定的範圍，即$|\sqrt{x}-2|$會$>=4$，故我們$\delta$必須取小的，所以$\delta \approx 0.97$(兩位有效位數)。
+
+
 
 ***
 
