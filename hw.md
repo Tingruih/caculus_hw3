@@ -288,9 +288,43 @@ The graph of a function f is given.
 ***
 
 ## Q3
- Use the definition of continuity and the properties of limits to show that the function is continuous at the given number a.
+Use the definition of continuity and the properties of limits to show that the function is continuous at the given number a.<br>
+ 1. $f(x) = 3x^2+(x+2)^5, a = -1$
+ 2. $p(v) = 2\sqrt{3v^2+1}, a = 1$
  
 ## Ans3
+So the definition of continuity at a certain point is consisted of three parts:
+
+$$
+\begin{align*}
+&\textbf{(1) The limit of the function at the point exists:} &\quad \lim_{x \to a} f(x) \text{ exists} \\
+&\textbf{(2) The value of the function at the point exists:} &\quad f(a) \text{ is defined} \\
+&\textbf{(3) The limit equals the function value:} &\quad \lim_{x \to a} f(x) = f(a)
+\end{align*}
+$$
+<hr>
+
+1. 
+$$
+\begin{aligned}
+&\lim_{x \to -1} f(x) = 4 \\
+&f(-1) = 4 \\
+&\lim_{x \to -1} f(x) = f(-1) \\
+&\text{Therefore, $f(x)$ is continuous at $x = -1$}\\
+&\end{aligned}
+$$
+
+
+2.
+
+$$
+\begin{aligned}
+&\lim_{v \to 1}p(v)=4\\
+&p(1) =4\\
+&\lim_{v\to1}p(v)=p(1)\\
+&\text{Therefore, $p(v)$ is continuous at $v = 1$} 
+&\end{aligned}
+$$
 
 ***
 
@@ -350,7 +384,6 @@ hi
 3. 全英文撰寫作業
 全英文撰寫作業是這次作業我給我自己的挑戰，我發現在上課的簡報中，太容易依賴翻譯去查詢那些數學專有名詞，寫上中文解釋後下次上課依然還是會忘記，真正用英文開始寫後，我發現有好多在數學算式中常用到的詞彙，像是假設(assume)，代數化簡(algebraic simplification)，function的定義錯誤(ill-definition)等，很多都是生活中常用到的單字但是會讓人想不到可以這樣運用，透過這次作業也讓我更熟悉這些數學的英文專有名詞，也期許自己能夠越來越熟悉，到最後可以能夠像母語一樣順利的運用。
 
-全英文撰寫作業是這次作業我給我自己的挑戰，我發現在上課的簡報中，太容易依賴翻譯去查詢那些數學專有名詞，寫上中文解釋後下次上課依然還是會忘記，真正用英文開始寫後，我發現有好多在數學算式中常用到的詞彙，像是假設(assume)，代數化簡(algebraic simplification)，function的定義錯誤(ill-definition)等，很多都是生活中常用到的單字但是會讓人想不到可以這樣運用，透過這次作業也讓我更熟悉這些數學的英文專有名詞，也期許自己能夠越來越熟悉，到最後可以能夠像母語一樣順利的運用。
 ***
 
 ### 姓名： 
@@ -386,16 +419,7 @@ hi
 
 
 # Reflection
-（應包含在作業中學習到的知識點，個人和小組整題的學習，工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
-### 學號：411485003
-### 姓名：胡庭睿
-### 心得：
-這次作業的時間點剛好在作業一的成績發佈之後，老師對作業的layouts, writing styles,reflection and team's distribution to the work也變得更清楚，為了更好的統一writing styles，首先我根據作業二用markdown混合latex的方式撰寫了修正過後的模板，不僅能夠統一組員的writing styles也可以更貼近老師的要求，再來用markdown + latex的好處是不用碰觸到latex排版，同時也能學習如何用latex的語法寫數學公式，最後則是處理上次作業中提及的共編問題，我寫了教學git 和 github的教學文檔，教了組員們必要的git知識，即使還是遇到了常見的版本衝突問題，花了一段時間才解決，但是我也同樣學到了許多。
 
-從這次的作業中，我個人學到了許多關於安排教學進度和教學組員的技巧，在這之前，我比較不擅長表達自己的想法，就只是做好別人指派給我的工作，但是在與組員交流過後，我發現組員也和我很像，但是這樣作業會開天窗，所以我想先試著改變自己，
-
-
-團隊工作風格的部分
 ```
 （應包含在作業中學習到的知識點，個人和小組整題的學習，團隊工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
 ```
@@ -408,6 +432,7 @@ hi
 從這次的作業中，我個人學到了許多關於安排教學進度和教學組員的技巧，在這之前，我比較不擅長表達自己的想法，就只是做好別人指派給我的工作，但是在與組員交流過後，我發現組員也和我很像，但是這樣作業會開天窗，所以我想要先試著改變自己，
 
 團隊工作風格的部分
+
 ***
 
 ### 學號：
@@ -483,4 +508,5 @@ hi
 
 ### 三者關係
 可微分一定連續，若連續，極限一定存在
+
 ## Appendix C
