@@ -2,7 +2,6 @@ import math
 
 def get_temperature(power):
     temperature = 0.1 * power ** 2 + 2.155 * power + 20 # 計算在 power 時的 T
-    # TODO: Compute the temperature according to the equation T(w) = 0.1w^2 + 2.155w + 20
     return temperature # 回傳 temperature
 
 def solve_power(temperature): # 從溫度反推功率
@@ -19,7 +18,6 @@ def solve_power(temperature): # 從溫度反推功率
         root2 = (-b - sqrt_d) / (2*a)
         power = max(root1, root2) # 取較大的值(正根)
 
-    #TODO: Solves the equation T(w) = 0.1w^2 + 2.155w + 20 for a given temperature.
     #Note: Only return the positive root
 
     return power

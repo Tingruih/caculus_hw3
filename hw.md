@@ -496,6 +496,7 @@ Draw the graph to illustrate the limit interms of the $\varepsilon , \delta $ de
 ## Ans3:
 
 
+<!-- pagebreak -->
 
 # Work Division
 
@@ -602,6 +603,10 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 學號：
 ### 姓名：
 ### 心得：
+
+
+<!-- pagebreak -->
+
 
 # Appendix
 

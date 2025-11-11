@@ -23,7 +23,6 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     #在點(x, y) = (target_power, target_temperature)上方 0.1 的地方寫出文字target_power(小數點後三位)並設定大小 9
     
     # Plot horizontal lines as epsilon bounds
-    # TODO: modify y_high and y_low to plot the correct lines
     y_high = target_temperature + eps
     y_low = target_temperature - eps # 溫度在 eps 範圍內的上下界
     plt.axhline(y=y_high, color='red', linestyle='-', label='eps bounds')
@@ -36,7 +35,6 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
             f"T = {target_temperature:.3f} - {eps:.3f}", color='red', fontsize=9, va='top')
     
     # Plot vertical lines as delta bounds
-    # TODO: modify x_left and x_right to plot the correct lines
     x_left = target_power
     x_right = target_power
     delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
@@ -65,20 +63,18 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     plt.close()  # Close the figure to free memory
     
 # Solve powers
-# TODO: Report and explain the meaning of the solved powers
 target_temperature = 200
 eps = 1
 target_power = solve_power(target_temperature)
 higher_power = solve_power(target_temperature+eps)
 lower_power = solve_power(target_temperature-eps)# 描寫溫度的誤差(eps)範圍
-
-delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
-# TODO: Update delta of the power so that the temperature is within an error tolerance epsilon = 1 at 200
-# Note: Please see the meanning of delta in the precise definition of the limit. 
-
-
-# Set power range for plotting
 power_range = [target_power-2, target_power+2]# 設定功率範圍
+delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
+
+
+print(f"Power needed to maintain 200°C: {target_power:.3f} W")
+print(f"Allowed power range for ±{eps}°C: [{lower_power:.3f}, {higher_power:.3f}] W")
+print(f"Corresponding delta: {delta:.3f} W")
 
 
 # Draw the graph
