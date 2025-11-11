@@ -39,7 +39,7 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     # TODO: modify x_left and x_right to plot the correct lines
     x_left = target_power
     x_right = target_power
-    delta = max(abs(target_power - lower_power), abs(higher_power ))
+    delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
     # 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
     plt.axvline(x=x_left, color='blue', linestyle='-', label='delta bounds')
     plt.axvline(x=x_right, color='blue', linestyle='-')
