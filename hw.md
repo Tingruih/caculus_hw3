@@ -345,20 +345,133 @@ $$
 
 # Crystal Growth Inspection
 
-## ?.py
+## test_crystal_growth.py
 
 ```python
+import numpy as np
+import matplotlib.pyplot as plt
+from crystal_growth import *
 
+def viz_limit(target_temperature, eps, target_power, delta, power_range):
+    min_power = power_range[0]
+    max_power = power_range[1]
+
+    w_values = np.linspace(min_power, max_power, 500) # 在功率範圍內取 500 個點
+
+    T_values = np.array([get_temperature(w_value) for w_value in w_values]) # 計算每個功率對應的溫度
+    
+    # Begin plotting
+    plt.figure(figsize=(10, 6)) # 設定圖片大小
+    plt.plot(w_values, T_values, label='T(w) = 0.1w² + 2.155w + 20', color='black') 
+    # 畫橫軸w_values、縱軸T_values、設定圖形標籤T(w) = 0.1w² + 2.155w + 20、設定顏色為黑色
+    # Plot point at T=200
+    plt.scatter([target_power], [target_temperature], color='black', zorder=5)
+    # 在(x, y) = (target_power, target_temperature)劃一個黑點
+    plt.axhline(y=target_temperature, color='gray', linestyle='--')  # Horizontal line at T=target_temperature
+    plt.axvline(x=target_power, color='gray', linestyle='--')  # Vertical line at target_power
+    plt.text(target_power + 0.1, target_temperature + 0.1, f"w = {target_power:.3f}", fontsize=9)
+    #在點(x, y) = (target_power, target_temperature)上方 0.1 的地方寫出文字target_power(小數點後三位)並設定大小 9
+    
+    # Plot horizontal lines as epsilon bounds
+    # TODO: modify y_high and y_low to plot the correct lines
+    y_high = target_temperature + eps
+    y_low = target_temperature - eps # 溫度在 eps 範圍內的上下界
+    plt.axhline(y=y_high, color='red', linestyle='-', label='eps bounds')
+    plt.axhline(y=y_low, color='red', linestyle='-')
+    plt.vlines(target_power, y_low, y_high, color='red', linestyle='dashed')
+    plt.text(power_range[0]+0.2, y_high+1,
+            f"T = {target_temperature:.3f} + {eps:.3f}", color='red', fontsize=9, va='bottom')
+
+    plt.text(power_range[0]+0.2, y_low-1,
+            f"T = {target_temperature:.3f} - {eps:.3f}", color='red', fontsize=9, va='top')
+    
+    # Plot vertical lines as delta bounds
+    # TODO: modify x_left and x_right to plot the correct lines
+    x_left = target_power
+    x_right = target_power
+    delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
+    # 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
+    plt.axvline(x=x_left, color='blue', linestyle='-', label='delta bounds')
+    plt.axvline(x=x_right, color='blue', linestyle='-')
+    plt.hlines(target_temperature, x_left, x_right, color='blue', linestyle='dashed')
+    min_temperature = get_temperature(min_power)
+    plt.text(x_right+0.05, min_temperature+1,
+            f"T = {target_power:.3f} + {delta:.3f}", color='blue', fontsize=9)
+
+    plt.text(x_left-0.7, min_temperature+1,
+            f"T = {target_power:.3f} - {delta:.3f}", color='blue', fontsize=9)
+    
+    # Labels and title
+    plt.title("Crystal Growth Temperature Control") # 設定標題名稱
+    plt.xlabel("Power Input (w)") # X 座標設為 w
+    plt.ylabel("Temperature T(w)") # Y座標設為 T
+    plt.grid(True) # 加上格線
+    plt.legend() # 顯示圖例標籤
+    plt.savefig("limit.png", dpi=300, bbox_inches='tight') # 儲存為 limit.png
+    plt.close()  # Close the figure to free memory
+    
+# Solve powers
+# TODO: Report and explain the meaning of the solved powers
+target_temperature = 200
+eps = 1
+target_power = solve_power(target_temperature)
+higher_power = solve_power(target_temperature+eps)
+lower_power = solve_power(target_temperature-eps)# 描寫溫度的誤差(eps)範圍
+
+delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
+# TODO: Update delta of the power so that the temperature is within an error tolerance epsilon = 1 at 200
+# Note: Please see the meanning of delta in the precise definition of the limit. 
+
+
+# Set power range for plotting
+power_range = [target_power-2, target_power+2]# 設定功率範圍
+
+
+# Draw the graph
+viz_limit(target_temperature, eps, target_power, delta, power_range)# 畫出eps delta圖
 ```
 
 ***
 
-## ?2.py
+## crystal_growth.py
 
 ```python
+import math
 
+def get_temperature(power):
+    temperature = 0.1 * power ** 2 + 2.155 * power + 20 # 計算在 power 時的 T
+    # TODO: Compute the temperature according to the equation T(w) = 0.1w^2 + 2.155w + 20
+    return temperature # 回傳 temperature
 
+def solve_power(temperature): # 從溫度反推功率
+    power = 0
+
+    a = 0.1
+    b = 2.155
+    c = 20 - temperature
+    
+    discriminant = b**2 - 4*a*c # 判別式大於 0 時才有實根
+    if discriminant >= 0:
+        sqrt_d = math.sqrt(discriminant) # 取平方根
+        root1 = (-b + sqrt_d) / (2*a)
+        root2 = (-b - sqrt_d) / (2*a)
+        power = max(root1, root2) # 取較大的值(正根)
+
+    #TODO: Solves the equation T(w) = 0.1w^2 + 2.155w + 20 for a given temperature.
+    #Note: Only return the positive root
+
+    return power
 ```
+1. 
+$ T(w)=0.1w^2+2.155w+20=200$
+$ \quad \Rightarrow \quad$
+$ 0.1w^2+2.155w+20-200=0\quad \Rightarrow \quad 0.1w^2+2.155w-180=0$
+
+$ w=\frac{-2.155\pm \sqrt{(2.155)^2-4\cdot 0.1\cdot (-180)}}{2\cdot 0.1}
+w=\frac{-2.155\pm \sqrt{4.646025+72}}{0.2}=\frac{-2.155\pm \sqrt{76.646025}}{0.2}
+w\approx \frac{-2.155\pm 8.756}{0.2} = 33.005 or -54.555$，取正，$ w = 33.005$
+
+
 
 
 
@@ -370,7 +483,7 @@ $$
 | 411485002 楊昕展 |   |   |
 | 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
 | 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
-| 411485042 黃柏崴 |   |   |
+| 411485042 黃柏崴 | 程式部分  |   |
 
 
 # Challenges and Difficulties
@@ -396,12 +509,16 @@ $$
 1. git的問題
 git是我這次作業第一次用，其中碰到了很多問題像是版本衝突、不會用終端機、指令不太熟悉。有一次版本衝突時我不知道他到底出了甚麼問題，他也沒有問我要不要覆寫或修改之類的，然後又不知道他的錯誤訊息到底甚麼意思，所以很著急，好在之後他跳出警示框讓我直接覆寫那段程式不然我也沒辦法自己處理，中間有問了同組的成員及AI，學到了本來不會學到的知識，之後我也有去提升我對git的認識，這讓我在操作git和處理問題上有更多的知識，不會的地方也比較明顯，讓我有辦法找尋相關的資源。
 2. markdown跟latex
-這次寫作業都是用markdown和latex寫，這和之前用的工具截然不同，一方面覺得數學是啊，那些專業或不常見的表達方式可以更直觀的表達出來，另一方面覺得設計跟排版的部分特別的麻煩跟困難，所以排版的公式我都請AI跟我講，雖然還是排的不怎麼樣，但是至少比一開始好多了。
+這次寫作業都是用markdown和latex寫，這和之前用的工具截然不同，一方面覺得數學式啊，那些專業或不常見的表達方式可以更直觀的表達出來，另一方面覺得設計跟排版的部分特別的麻煩跟困難，所以排版的公式我都請AI跟我講，雖然還是排的不怎麼樣，但是至少比一開始好多了。
 
 ***
 
-### 姓名： 
+### 姓名： 黃柏崴
 ### 遇到的困難與挑戰：
+1. git共編與
+這是我第一次接觸 git共編，使用中常常會怕不小心沒有 pull 到資料而把別人的部分蓋掉，而且對指令的操作部分也不太熟，但有求助厲害的組員。像是git add .的意思是把資料存到暫存區，git commit -m的意思是把暫存區中的變更提交到本地版本庫，而git pull -- rebase的意思是先把遠端的更新拉下來，然後再把本地的提交重新套用在最新的遠端版本上，--rebase是類似排隊的功能，希望未來能完全熟悉這項技能，成為別人口中厲害的組員。
+2. latex編輯
+開始利用latex寫報告讓我意識到他的方便，這是大學前完全接觸不到的技巧，他可以以更專業的方式、符號直觀的表達出來，而且有了上次作業的經驗，這次報告的書寫比上次順手得多，但還是有些不足，我還是時常需要詢問 AI，只是更知道該用甚麼方式去寫。這些經歷讓我對他們更加熟悉，他能讓撰寫報告變得更加方便而且也省去一個個抓的排版，未來在考研或其他需要做報告的時候，有這些經驗也會讓我更加得心應手。
 
 ***
 
@@ -423,7 +540,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 | 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)| |
 | 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
 | [姓名2] | [時數] | 1. [工作項目1]<br>2. [工作項目2] | [自行分析原因] |
-| ... | ... | ... | ... |
+| 黃柏崴 | 6.5hr | 1. the program parton (4hr)<br> 2. write report (2.5hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
 | ... | ... | ... | ... |
 
 
@@ -451,9 +568,13 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 
 ***
 
-### 學號：
-### 姓名：
+### 學號：411485042
+### 姓名：黃柏崴
 ### 心得：
+我負責的部分是我不熟的程式部分，但實際做下來發現要做的事其實沒那麼可怕，但也可以了解 python 在做甚麼和如何書寫，這次我更加了解程式的功用，例如它可以用來生成這麼詳細的圖片，這是我完全沒有深思的部分，高中時期去的化工營介紹程式可以用來時時監控反應的變化、不同數據產出的結果，這次的作業是做晶體的成長在不同溫度的功率並畫出誤差範圍，這也對程式的跨領域有了更深的認知。
+
+這次我們使用latex的語法寫報告，不同的是這次新增了共編的方式，但我目前還不是很熟悉，很多地方還時要靠詢問同學與 AI 才能寫出來，過程中常常怕不小心忘記做甚麼、做錯甚麼，一直問同學這樣有沒有問題，希望在下次作業能減少這些懵懂，提高做作業的效率。而 latex 的部分隨然還是需要靠 AI 幫忙轉換，但在一些比較常用的部分可以自己寫，而且我也更懂甚麼時候要用甚麼與各自的意思，我相信我以後還會持續進步，最終能幾乎不需依靠 AI 就能寫出篇完整的報告。很慶幸有這些機會能實際操作這些以前沒有的東西，雖然現在還不適特別熟悉，但在老師的帶領與組員的幫助下只會更加得心應手！
+
 
 ***
 
