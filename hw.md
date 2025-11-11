@@ -142,7 +142,7 @@ $$
  
 
 ## Q3
-Use Squeeze Theeorom to show that 
+Use Squeeze Theorem to show that 
 $$\lim_{x \to 0}\sqrt{x^3+x^2}\sin{\frac{\pi}{x}}$$
 ## Ans3
 $$ -1\leq\sin{\frac{\pi}{x}}\leq1\\$$
@@ -472,7 +472,7 @@ w=\frac{-2.155\pm \sqrt{4.646025+72}}{0.2}=\frac{-2.155\pm \sqrt{76.646025}}{0.2
 w\approx \frac{-2.155\pm 8.756}{0.2} = 33.005 or -54.555$，取正，$ w = 33.005$
 
 
-
+<!-- pagebreak -->
 
 
 
@@ -582,8 +582,10 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 姓名：
 ### 心得：
 
-# Appendix
 
+<!-- pagebreak -->
+
+# Appendix
 
 ## Appendix A
 
