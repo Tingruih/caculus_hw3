@@ -26,6 +26,24 @@ clone下來的檔案應該會在c槽user資料夾裡面
     * git commit -m "說明"（將暫存區的檔案提交到本地倉庫）
     * git push -u origin main（第一次要這樣打，之後可以直接用git push，將本地的提交推送到github）
 
+# 遠端repo內容與本地內容不一樣
+solution:
+保留本地修改且同時拉取遠端內容
+```
+git add .
+git commit -m "?"
+git pull --rebase  # 或 git pull --no-rebase
+輸入完後會進到vim，按一下esc,輸入:wq,然後enter就行了
+```
+
+放棄本地修改，直接用遠端repo的
+```
+git fetch origin
+git reset --hard origin/main
+```
+
+
+
 # Alternative method
 1. 到vscode extensions搜尋live share並下載
 2. 點擊 https://prod.liveshare.vsengsaas.visualstudio.com/join?74E9A632C73EB5F1DE9E66DA2E18E322A28C 就可以編輯了
