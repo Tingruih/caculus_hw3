@@ -211,6 +211,7 @@ $$
 \text{if } |x - 4| < \delta \text{ then } |\sqrt{x} - 2| < 0.4
 $$
 Explain the answer with a graph.
+
 ## Ans6
 ![q6.png](images/q6.png)
 
@@ -364,9 +365,7 @@ Use properties of limits to evaluate the limit.
 ## Ans4
 1. First, separate $x \sqrt{20 - x^2}$, and consider $x$ and $\sqrt{20-x^2}$ individually. $x$ is a polynomial function. That mean, on its domain $\{x | x \in \mathbb{R}\}$, it must be continuous. And $\sqrt{20-x^2}$ is a root function, it must also be continuous on its domain $\{ x \in \mathbb{R} |  -\!\!\sqrt{20} \le x \le \sqrt{20} \}$. According to the properties of continuity, $x \sqrt{20 - x^2}$ must be continuity,  with the range $-\!\!\sqrt{20} \le x \le \sqrt{20}$. Next, since $x = 2$ is within this range, let $x \sqrt{20 - x^2}$ is \(f(x)\). Therefore, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = f(2) = 2 \sqrt{20 - 2^2} = 2 \sqrt{16} = 2 \cdot 4 = 8$. Or, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = (\lim_{x \to 2}x)(\lim_{x \to 2}\sqrt{20-x^2})=2 \sqrt{16} = 2 \cdot 4 = 8$(Product Law).
 
-2. $\sin \theta$, $\cos \theta$, and $\tan \theta$ all are trigonometric, and they are continuous on their domains. Except for $\tan \theta$, whose domain is $\{\theta\in \mathbb{R}| \cos \theta \neq 0 \}$, that is $\theta \neq \frac{\pi}{2} + k (k \in \mathbb{Z})$, the domains of the other two functions are $\{\theta | \theta \in \mathbb{R}\}$. Since $\cos \theta$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is continuous, and $\tan (\cos \frac{\pi}{2}) = \tan (0) = 0$ is continuous. According to the continuity theorem, $\tan (\cos \theta)$ is continuous at $\theta = \frac{\pi}{2}$. We can get $\ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0$.
-
-Next, consider $\sin(\tan(\cos\theta))$. Since $\tan (\cos \theta)$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is not defined. Let $b = \tan (\cos \frac{\pi}{2}) = 0$. From $\sin b = \sin 0 = 0$, we can know sin b is continuous at $b$, and $ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0 = b$. According to the continuity therom, $ \lim_{\theta \to \frac{\pi}{2}}\sin b = \lim_{\theta \to \frac{\pi}{2}}\sin (\tan (\cos \theta)) = \sin (\lim_{\theta \to \frac{\pi}{2}}\tan (\cos \theta)) = \sin 0 = 0$.
+2. $\sin \theta$, $\cos \theta$, and $\tan \theta$ all are trigonometric, and they are continuous on their domains. Except for $\tan \theta$, whose domain is $\{\theta\in \mathbb{R}| \cos \theta \neq 0 \}$, that is $\theta \neq \frac{\pi}{2} + k (k \in \mathbb{Z})$, the domains of the other two functions are $\{\theta | \theta \in \mathbb{R}\}$. Since $\cos \theta$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is continuous, and $\tan (\cos \frac{\pi}{2}) = \tan (0) = 0$ is continuous. According to the continuity theorem, $\tan (\cos \theta)$ is continuous at $\theta = \frac{\pi}{2}$. We can get $\ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0$.<br>Next, consider $\sin(\tan(\cos\theta))$. Since $\tan (\cos \theta)$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is not defined. Let $b = \tan (\cos \frac{\pi}{2}) = 0$. From $\sin b = \sin 0 = 0$, we can know sin b is continuous at $b$, and $ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0 = b$. According to the continuity therom, $ \lim_{\theta \to \frac{\pi}{2}}\sin b = \lim_{\theta \to \frac{\pi}{2}}\sin (\tan (\cos \theta)) = \sin (\lim_{\theta \to \frac{\pi}{2}}\tan (\cos \theta)) = \sin 0 = 0$.
 
 <!-- pagebreak -->
 
@@ -417,6 +416,8 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     x_left = target_power
     x_right = target_power
     delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
+    x_left = target_power - delta
+    x_right = target_power + delta
     # 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
     x_left = target_power - delta
     x_right = target_power + delta # 算出 X 的左右範圍
@@ -445,13 +446,13 @@ eps = 1
 target_power = solve_power(target_temperature)
 higher_power = solve_power(target_temperature+eps)
 lower_power = solve_power(target_temperature-eps)# 描寫溫度的誤差(eps)範圍
-
-delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
-# Note: Please see the meanning of delta in the precise definition of the limit. 
-
-
-# Set power range for plotting
 power_range = [target_power-2, target_power+2]# 設定功率範圍
+delta = max(abs(higher_power - target_power), abs(lower_power - target_power))# 溫度在誤差 1 的範圍內，功率的最大偏差值就是要的 delta
+ 
+
+print(f"Power needed to maintain 200°C: {target_power:.3f} W")
+print(f"Allowed power range for ±{eps}°C: [{lower_power:.3f}, {higher_power:.3f}] W")
+print(f"Corresponding delta: {delta:.3f} W")
 
 
 # Draw the graph
@@ -487,6 +488,14 @@ def solve_power(temperature): # 從溫度反推功率
 
     return power
 ```
+程式圖形:
+
+![alt text](images/result.png)
+
+終端機測資:
+
+![alt text](images/terminal.png)
+
 ## Q1:
 How much power is needed to maintain the temperature at $ 200^\circ\mathrm{C}$ ?
 
@@ -516,11 +525,34 @@ $w=\frac{-2.155\pm \sqrt{(2.155)^2-4\cdot 0.1\cdot (-179)}}{2\cdot 0.1}$
 
 $ w\approx \frac{-2.155\pm 8.73}{0.2}\Rightarrow w_{\mathrm{low}}\approx 32.88$
 
+when $ 201^\circ\mathrm{C}$
+
+$ 0.1w^2+2.155w+20=201\Rightarrow 0.1w^2+2.155w-181=0$
+
+$ w=\frac{-2.155\pm \sqrt{(2.155)^2-4\cdot 0.1\cdot (-181)}}{0.2}=\frac{-2.155\pm \sqrt{4.646+72.4}}{0.2}=\frac{-2.155\pm \sqrt{77.046}}{0.2}$
+
+$ w\approx \frac{-2.155\pm 8.78}{0.2}\Rightarrow w_{\mathrm{high}}\approx 33.12$
+
+range of wattage is 33.12 < w < 32.88
+
+
+
 ***
 ## Q3:
 Draw the graph to illustrate the limit interms of the $\varepsilon , \delta $ definition of $ \lim _{x\rightarrow a}f(x)=L$ .
 
 ## Ans3:
+let f(x) = x, a = 1
+
+$\forall a,  \lim _{x\rightarrow a}f(x)=a$
+
+$ \because \forall \varepsilon >0,\exists \delta >0\mathrm{\  such\  that\  }0<|x-a|<\delta \Rightarrow |f(x)-a|<\varepsilon $,  $ f(x)=x$
+
+$ \therefore |f(x)-a|=|x-a| $
+
+when $ \varepsilon = \delta$ , $ \lim _{x\rightarrow a}f(x)=L$ is established.
+
+![alt text](images/image.png)
 
 
 <!-- pagebreak -->
