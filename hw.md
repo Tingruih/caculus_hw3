@@ -95,7 +95,7 @@ $$
 Evaluate the limit, if it exists.
 1. $\lim_{x \to -2}(3x-7)$
 
-2. $\lim_{t^2-2t-8}(t-4)$
+2. $\lim_ {t \to 4}\frac{t² - 2t - 8}{t - 4}$
 
 3. $\lim_{x \to 2}\frac{2-x}{\sqrt{x+2}-2}$
 
@@ -105,7 +105,7 @@ Evaluate the limit, if it exists.
 
 1. Because $3x-7$ is a continuous function, which means $\lim_{x \to 2}3x-7 = 3\times 2-7(\text{continuous definition:}\lim_{x \to a}f(x) = f(a))$,so we can find out that the limit is $-1$
 
-2. The limit expression is mathematically ill-defined. The notation below $\lim$ ,which is $t^2-2t-8$,is not a valid convergence condition. It fails to specify the value that the variable t is approaching (ex:$t \to 4$). Without this "target point," the limit cannot be calculated, so this problem has no solution.
+2. 
 
 3. We cannot apply Quotient Law because the limit of the denominator is 0, so we need to perform algebraic simplification on the expression first.
 $$
