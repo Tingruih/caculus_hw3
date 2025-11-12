@@ -212,7 +212,10 @@ $$
 $$
 Explain the answer with a graph.
 ## Ans6
-![hw3-1-Q6-1.png](images/hw3-1-Q6-1.png)
+![q6.png](images/hw3-1-Q6-1.png)
+
+Juging from graph, at point P, the distance to point O along the y-axis is $\overline{BD} = 0.4$. The distance to point O along the x-axis is $\overline{AE} = 4 - 2.56 = 1.44$. At point Q, the distance to point O along the y-axis is also $\overline{BC} = 0.4$. The distance to point O along the x-axis is $\overline{AF} = 5.76 - 4 = 1.76$. However, the $\delta$ we are finding is an absolute value. That is, the distances from both sides to $x$ are equal. So, should $\delta$ be taken as 1.44 or 1.56? Since when we take the limit, the range can be made as small as we want, and the range of $\sqrt{x}-2$ must be within 0.4. If we take the larger value, the smaller side’s x could exceed the range we have set, that is $|\sqrt{x}-2| \ge 4$, so our $\delta$ must be taken as the smaller value. Therefore,
+$\delta = 1.44$.
 
 
 
@@ -221,17 +224,32 @@ Explain the answer with a graph.
 ## Q7
 Prove the following statements based on the precise definition of limits.
 
-1. $\displaystyle\lim_{x \to 4} \frac{x^2 - 2x - 8}{x - 4} = 6$
+1. $\displaystyle \lim_{x \to 4} \frac{x^2 - 2x - 8}{x - 4} = 6$
 
 2. $\displaystyle \lim_{x \to -6^+} \sqrt[8]{6 + x} = 0$
 ## Ans7
+1.   First, we want to find a number $\delta$ such that if $0 < |x - 4| < \delta$ then $|\frac{x^2 - 2x - 8}{x - 4} - 6 | < \varepsilon$. Since $|\frac{x^2 - 2x - 8}{x - 4} - 6| = |\frac{x^2 - 2x - 8}{x - 4} - \frac{6x - 24}{x - 4}| = |\frac{(x^2 - 2x - 8) - (6x - 24)}{x - 4}| = |\frac{x - 8x + 16}{x - 4}| = |\frac{(x - 4)^2}{x - 4}| = |x - 4|$. we guess $\varepsilon = \delta$.
 
+Prove:Choose $\delta = \varepsilon$. If $0 < |x - 4| < \delta$, then $|\frac{x^2 - 2x - 8}{x - 4} - 6 | = |x - 4| < \delta = \varepsilon$.
+
+Therefore, by the precise definition of a limit, $ \displaystyle \lim_{x \to 4} \frac{x^2 - 2x - 8}{x - 4} = 6$.
+
+2. First, we want to find a number $\delta$ such that if $-6 < x < -6 + \delta$, then $| \sqrt[8]{6 + x} - 0| < \varepsilon$. Since $-6 < x < -6 + \delta$, $|\sqrt[8]{6 + x} - 0| < \varepsilon \implies |\sqrt[8]{6 + x}| < \varepsilon \implies \sqrt[8]{6 + x} < \varepsilon\ \implies 6 + x < \varepsilon^8 \implies x < \varepsilon^8 - 6$. We get $\varepsilon^8 = \delta$.
+
+Prove:Choose $\delta = \varepsilon^8$. If $-6 < x < -6 + \delta$, then $| \sqrt[8]{6 + x} - 0 | = |\sqrt[8]{6 + x}| < |\sqrt[8]{6 + \delta - 6}| = |\sqrt[8]{\delta}| = |\sqrt[8]{\varepsilon^8}| = |\varepsilon|$, because $\varepsilon > 0$. That is, $| \sqrt[8]{6 + x} - 0 | < \varepsilon$.
+
+Therefore, by the precise definition of one-sided limit, $\displaystyle \lim_{x \to 4} \frac{x^2 - 2x - 8}{x - 4} = 6$.
 ***
 
 ## Q8
 Prove that $\displaystyle \lim_{x \to -3} \frac{1}{(x+3)^4} = \infty$ using the precise definition of an infinite limit.
 ## Ans8
+First, we want to find a number $\delta$ such that if $0 < |x - (-3)| < \delta$, then $\frac{1}{(x+3)^4} > M$ (holds for all positive numbers). $\frac{1}{(x+3)^4} > M \implies \frac{1}{M} < (x+3)^4 \implies \sqrt[4]{\frac{1}{M}} < x + 3 \implies \sqrt[4]{\frac{1}{M}} < |x + 3| \implies \sqrt[4]{\frac{1}{M}} < |x - (-3)|$, we get $|x - (-3)| > \sqrt[4]{\frac{1}{M}}$.
 
+Prove:
+if $0 < |x - (-3)| < \delta = \sqrt[4]{\frac{1}{M}}$, then $\frac{1}{(x+3)^4} > M$(holds for all positive numbers).
+
+Therefore, by the precise definition of an positive infinite limit,$\displaystyle \lim_{x \to -3} \frac{1}{(x+3)^4} = \infty$.
 
 <!-- pagebreak -->
 
@@ -344,9 +362,11 @@ Use properties of limits to evaluate the limit.
 
 2. $\displaystyle \lim_{\theta \to \frac{\pi}{2}} \sin(\tan(\cos\theta))$ 
 ## Ans4
+1. First, separate $x \sqrt{20 - x^2}$, and consider $x$ and $\sqrt{20-x^2}$ individually. $x$ is a polynomial function. That mean, on its domain $\{x | x \in \mathbb{R}\}$, it must be continuous. And $\sqrt{20-x^2}$ is a root function, it must also be continuous on its domain $\{ x \in \mathbb{R} |  -\!\!\sqrt{20} \le x \le \sqrt{20} \}$. According to the properties of continuity, $x \sqrt{20 - x^2}$ must be continuity,  with the range $-\!\!\sqrt{20} \le x \le \sqrt{20}$. Next, since $x = 2$ is within this range, let $x \sqrt{20 - x^2}$ is \(f(x)\). Therefore, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = f(2) = 2 \sqrt{20 - 2^2} = 2 \sqrt{16} = 2 \cdot 4 = 8$. Or, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = (\lim_{x \to 2}x)(\lim_{x \to 2}\sqrt{20-x^2})=2 \sqrt{16} = 2 \cdot 4 = 8$(Product Law).
 
+2. $\sin \theta$, $\cos \theta$, and $\tan \theta$ all are trigonometric, and they are continuous on their domains. Except for $\tan \theta$, whose domain is $\{\theta\in \mathbb{R}| \cos \theta \neq 0 \}$, that is $\theta \neq \frac{\pi}{2} + k (k \in \mathbb{Z})$, the domains of the other two functions are $\{\theta | \theta \in \mathbb{R}\}$. Since $\cos \theta$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is continuous, and $\tan (\cos \frac{\pi}{2}) = \tan (0) = 0$ is continuous. According to the continuity theorem, $\tan (\cos \theta)$ is continuous at $\theta = \frac{\pi}{2}$. We can get $\displaystyle \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0$.
 
-
+Next, consider $\sin(\tan(\cos\theta))$. Since $\tan (\cos \theta)$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is not defined. Let $b = \tan (\cos \frac{\pi}{2}) = 0$. From $\sin b = \sin 0 = 0$, we can know sin b is continuous at $b$, and $\displaystyle \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0 = b$. According to the continuity therom, $\displaystyle \lim_{\theta \to \frac{\pi}{2}}\sin b = \lim_{\theta \to \frac{\pi}{2}}\sin (\tan (\cos \theta)) = \sin (\lim_{\theta \to \frac{\pi}{2}}\tan (\cos \theta)) = \sin 0 = 0$.
 
 <!-- pagebreak -->
 
@@ -509,7 +529,7 @@ Draw the graph to illustrate the limit interms of the $\varepsilon , \delta $ de
 
 | 學號/姓名 | 分配項目（寫） | 分配項目（檢查） |
 | --- | --- | --- |
-| 411485002 楊昕展 |   |   |
+| 411485002 楊昕展 | part1: 6, 7, 8<br> part2: 4 |   |
 | 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
 | 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
 | 411485042 黃柏崴 | 程式部分 |   |
@@ -551,9 +571,19 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 
 ***
 
-### 姓名： 
+### 姓名： 楊昕展
 ### 遇到的困難與挑戰：
+1. latex編輯
+完成Hw1時，我幾乎沒接觸到這latex語法(有初步學習)，所以我下定決心Hw3要開始使用，但是，還有另個難題，git共編，完全了解不了。所以我先完全不理它，自行到overleaf先學習latex，學習latex時，雖然Hw2時有看overleaf的註冊完的教學，實際開始時，簡直大腦空白。所以耗費六個小時搞清楚、寫完環境排版與教授的題目，不會的請教AI，題目完全沒碰。\usepackage{xeCJK}可以支援中文、\usepackage{amsmath, amssymb}可以使用更多類型的數學公式等\usepackage，但再來，我學會更多框架，像是qustion計數器，使用newcounter、排版置中用centering。隔天，花了四個小時完成程式部分，用AI學接下來latex公式的部分，舉例來說，每個必須用\\(\\)包住(後來由於markdown，只能乖乖改回$$)，地一個學的是lim，\lim_{x \to 0}，剛開始一直忘記底線_，還有，\delta、\displaystyle、\infty、\ge、\approx、\varepasilon、\implies這些已經非常熟悉了，最後也成功把我的部分在overleaf完成。(後來發現這些其實最簡單)
 
+2. git共編
+雖然hw2就使用github了，但那時是組員胡同學全程控制，我把完成部份給他，沒有共編，其實根本完全不了解git，但到了這次作業報告，不僅要學latex，開始了解git成了最困擾的問題(說實話，現在還是不太了解，只懂些操作概念)，我從overleaf上的latex，變成要了解怎麼操作git，像是在termial，git pull把資料先載下來，接著git add.與git commit -m""命名存取，最後git push存到github，這些都是蘇同學、胡同學教我如何操作的，非常感謝他們。
+
+3. markdown格式要求、中翻英
+雖然了解概念，但我最麻煩的是，把overleaf上的全部latex格式除了公式，大都改成markdown，還有因為我第一次直接用英文寫不太懂此語言在數學的樣式，所以把寫完的部份移到VScode(我們用的環境)非常困擾我，我最後的解決辦法是每題問AI翻譯，再把每個\\(\\)改成$$(其實剛開始想偷懶直接全部丟給AI改，但最後latex語法行不通，甚至他把我的回答改的亂七八糟)。我當時以為每個字都要翻譯，但其實只有我寫的第一題而已，剩下的大都都用自己的話寫，我也驚訝到了，下次打算直接用英文完成。
+
+4. 作業內容
+除了上述三點的困難，這次作業與先前作業內容都是高中內容不同，開始有新的微積分知識要開始學習
 # Meeting Records
 
 | 會議日期 | 會議方式 (線上/實體) | 討論事項 |
