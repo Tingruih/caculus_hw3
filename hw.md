@@ -239,9 +239,21 @@ Prove the following statements based on the precise definition of limits.
 
 2. $\lim_{x \to -6^+} \sqrt[8]{6 + x} = 0$
 ## Ans7
-1.   First, we want to find a number $\delta$ such that if $0 < |x - 4| < \delta$ then $\displaystyle|\frac{x^2 - 2x - 8}{x - 4} - 6 | < \varepsilon$. Since $\displaystyle|\frac{x^2 - 2x - 8}{x - 4} - 6| = |\frac{x^2 - 2x - 8}{x - 4} - \frac{6x - 24}{x - 4}| = |\frac{(x^2 - 2x - 8) - (6x - 24)}{x - 4}| = |\frac{x - 8x + 16}{x - 4}| = |\frac{(x - 4)^2}{x - 4}| = |x - 4|$. we guess $\varepsilon = \delta$.
+1.   First, we want to find a number $\delta$ such that if $0 < |x - 4| < \delta$ then $\displaystyle|\frac{x^2 - 2x - 8}{x - 4} - 6 | < \varepsilon$. 
 
-Prove:Choose $\delta = \varepsilon$. If $0 < |x - 4| < \delta$, then $\displaystyle|\frac{x^2 - 2x - 8}{x - 4} - 6 | = |x - 4| < \delta = \varepsilon$.
+Since
+$$
+\begin{aligned}
+&|\frac{x^2 - 2x - 8}{x - 4} - 6| \\
+&= |\frac{x^2 - 2x - 8}{x - 4} - \frac{6x - 24}{x - 4}| \\
+&= |\frac{(x^2 - 2x - 8) - (6x - 24)}{x - 4}| \\
+&= |\frac{x - 8x + 16}{x - 4}| \\
+&= |\frac{(x - 4)^2}{x - 4}| \\
+&= |x - 4|\end{aligned}
+$$
+We guess $\varepsilon = \delta $
+
+Prove: Choose $\delta = \varepsilon$. If $0 < |x - 4| < \delta$, then $\displaystyle|\frac{x^2 - 2x - 8}{x - 4} - 6 | = |x - 4| < \delta = \varepsilon$.
 
 Therefore, by the precise definition of a limit, $ \displaystyle \lim_{x \to 4} \frac{x^2 - 2x - 8}{x - 4} = 6$.
 
@@ -635,7 +647,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
-| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)||
+| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)|Cause I've done my part early, so I spend more time on the better way the report could be represent in. <br> Also before writing tutorial and finding ways to convert markdown to pdf,these pretest took me tons of time.<br>For example I create a new repo to test out version conflict problems that could happen. Though it takes a lot of time, I really enjoy learning from it.|
 | 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
 | 楊昕展 | 12小時 | 1. part1: 6, 7, 8<br>2. part2: 4 | Actually doing my parts took about 6 hours because practing Latex approach 6 hours.  |
 | 黃柏崴 | 9.5hr | 1. the program parton (5.5hr)<br> 2. write report (4hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
@@ -644,9 +656,6 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 
 # Reflection
 
-```
-（應包含在作業中學習到的知識點，個人和小組整題的學習，團隊工作風格的反思，總結在此次作業中遇到的挑戰和問題(work hours, division)）
-```
 
 ### 學號：411485003
 ### 姓名：胡庭睿
