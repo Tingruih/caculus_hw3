@@ -175,10 +175,10 @@ What happens to point $R$ as circle $C_2$ shrinks (as $r \to 0^+$)?
 ## Ans4
 $$
 \begin{aligned}
-&x^2+y^2=r^2 \hspace{1cm} \text{(1)} \\
-&(x-1)^2+y^2=1 \hspace{1cm} \text{(2)} \\
-&\text{(1) - (2) cancel } y^2\\
-&=2x-1=r^2-1\\
+&x^2+y^2=r^2 \hspace{1cm} &\text{(1)} \\
+&(x-1)^2+y^2=1 \hspace{1cm} &\text{(2)} \\
+&\text{(1) - (2)}&\text{cancel}\hspace{0.2cm}  y^2\\
+&2x-1=r^2-1\\
 &x=\frac{r^2}{2}\hspace{1cm}y=\frac{r^2}{2}\\
 &Q(x, y)=(\frac{r^2}{2}, \frac{r^2}{2})\\
 &P(0,r)\\
@@ -389,7 +389,7 @@ Use properties of limits to evaluate the limit.
 
 2. $\sin \theta$, $\cos \theta$, and $\tan \theta$ all are trigonometric, and they are continuous on their domains. Except for $\tan \theta$, whose domain is $\{\theta\in \mathbb{R}| \cos \theta \neq 0 \}$, that is $\theta \neq \frac{\pi}{2} + k (k \in \mathbb{Z})$, the domains of the other two functions are $\{\theta | \theta \in \mathbb{R}\}$. Since $\cos \theta$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is continuous, and $\tan (\cos \frac{\pi}{2}) = \tan (0) = 0$ is continuous. According to the continuity theorem, $\tan (\cos \theta)$ is continuous at $\theta = \frac{\pi}{2}$. We can get $\ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0$.<br>Next, consider $\sin(\tan(\cos\theta))$. Since $\tan (\cos \theta)$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is not defined. Let $b = \tan (\cos \frac{\pi}{2}) = 0$. From $\sin b = \sin 0 = 0$, we can know sin b is continuous at $b$, and $ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0 = b$. According to the continuity therom, $ \lim_{\theta \to \frac{\pi}{2}}\sin b = \lim_{\theta \to \frac{\pi}{2}}\sin (\tan (\cos \theta)) = \sin (\lim_{\theta \to \frac{\pi}{2}}\tan (\cos \theta)) = \sin 0 = 0$.
 
-<!-- pagebreak -->
+
 
 # Crystal Growth Inspection
 
@@ -657,7 +657,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
 | 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)|Cause I've done my part early, so I spend more time on the better way the report could be represent in. <br> Also before writing tutorial and finding ways to convert markdown to pdf,these pretest took me tons of time.<br>For example I create a new repo to test out version conflict problems that could happen. Though it takes a lot of time, I really enjoy learning from it.|
-| 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
+| 蘇星丞| 5hr | 1. part1: 3, 4, 5 (1hr)<br>2. part2: 3 (1hr)<br>3.learning latex and git (3hr)  | except the part of writting the homework, i did less in addtional works. |
 | 楊昕展 | 12小時 | 1. part1: 6, 7, 8<br>2. part2: 4 | Actually doing my parts took about 6 hours because practing Latex approach 6 hours.  |
 | 黃柏崴 | 9.5hr | 1. the program parton (5.5hr)<br> 2. write report (4hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
 
@@ -682,7 +682,8 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 學號：411485018
 ### 姓名：蘇星丞
 ### 心得：
-我覺得這次寫作業我學到很多新的東西跟知識，像如何打文法跟如何用git，我花了一些時間學習，也逐漸理解我們的模板是怎麼用這個語法寫的跟如何轉成PDF，相信再過一陣子可以完全理解她在幹嘛，讓我也有機會自己用用看那些設定之類的。另外也學會如何跟組員合作與協調，之前我都比較做自己的部分，但我逐漸開始會問問其他人像是怎麼做或要如何整合之類的，這讓我也有機會練習如何與其他人合作。下次希望可以有辦法自己調整排版或字體，也希望能了解我們的PDF是怎麼從程式碼變出來的，還有希望下次能用git的其他功能像是branch，這讓我們能用更明瞭的方法寫功課。
+我覺得這次寫作業我學到很多新的東西跟知識，像如何打文法跟如何用git，我花了一些時間學習，也逐漸理解我們的模板是怎麼用這個語法寫的跟如何轉成PDF，相信再過一陣子可以完全理解她在幹嘛，讓我也有機會自己用用看那些設定之類的。另外也學會如何跟組員合作與協調，之前我都比較做自己的部分，但我逐漸開始會問問其他人像是怎麼做或要如何整合之類的，這讓我也有機會練習如何與其他人合作。下次希望可以有辦法自己調整排版或字體，或者可以試試如何用或創建整個作業的模板，這樣因該也會加強我對這類程式的理解跟熟悉度，也希望能了解我們的PDF是怎麼從程式碼變出來的，如果有機會也想試試看把功課或文件改成PDF格式，還有希望下次能用git的其他功能像是branch，這讓我們能用更明瞭的方法寫功課，也不會常常遇到衝突。
+
 
 ***
 
