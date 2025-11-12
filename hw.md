@@ -199,19 +199,20 @@ Use the given graph of $f$ to find a number $\delta$ such that: $0 < |x - 3| < \
 
 ![Graph for Q5](images/q4.jpeg)
 ## Ans5
-$$
+$
 \begin{aligned}
 &|f(x)-2| < 0.5\\
 &1.5 < f(x) < 2.5\\
 &f(x)=1.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 2.6\\
 &f(x)=2.5\hspace{0.2cm}\text{as}\hspace{0.2cm}x = 3.8\\
-&\text{so when $x \in(2.6,3.8)$ then the inequality $|f(x) - 2| < 0.5$ will be satisfied}\\
-&\text{Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
-This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
-Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.}
-good
 \end{aligned}
-$$
+$
+So when $x \in(2.6,3.8)$ then the inequality $|f(x) - 2| < 0.5$ will be satisfied
+Given the inequality $0<|x-3|<\delta$ , the value of $\delta$  must ensure that the condition $|f(x)-2|<0.5$ is satisfied.
+This means $\delta$  must be the smallest distance between 3 and the x-values where $f(x)=1.5$ and $f(x)=2.5$, which are 2.6 and 3.8 respectively.
+Therefore, $\delta =\min (3-2.6,\  3.8-3)=\min (0.4,\  0.8)=0.4$.
+
+
 ***
 
 ## Q6
@@ -564,26 +565,28 @@ when $ \varepsilon = \delta$ , $ \lim _{x\rightarrow a}f(x)=L$ is established.
 | 學號/姓名 | 分配項目（寫） | 分配項目（檢查） |
 | --- | --- | --- |
 | 411485002 楊昕展 | part1: 6, 7, 8<br> part2: 4 |   |
-| 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
+| 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B| 程式部分 |
 | 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
 | 411485042 黃柏崴 | 程式部分 | part1: 1 ~ 8 |
 
 
 # Challenges and Difficulties
 
-此處由每位成員報告在擔任實作者或審核者時遇到的挑戰或未解決的問題，包含未來工作
  
 ### 姓名： 胡庭睿
 ### 遇到的困難與挑戰：
 1. markdown轉pdf
 在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex,basictex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced的extension,對latex公式有很好的支援度，字體以及版面等也都可以透過.less控制，有不錯的自訂度，只是文檔寫的不太詳細，花了我一點時間才解決，不過我也學到了許多。
-在上次作業中使用的extension(markdown pdf)，在轉換多行latex公式時(ex: \begin{aligned})會無法辨別，於是我在網上尋找許多不同方法，但是轉換的效果都不令我滿意，pandoc雖然能夠很好的渲染出latex公式，但是圖片的位置卻無法置中，換了很多個latex engine依然無解(pdflatex, mactex, xetex,basictex)再加上標題頁是用html寫的， 也意味著標題頁需要重寫，但是我卻一直無法將它修改到我想要的樣式，最後我找到了一個叫做markdown preview enhanced的extension,對latex公式有很好的支援度，字體以及版面等也都可以透過.less控制，有不錯的自訂度，只是文檔寫的不太詳細，花了我一點時間才解決，不過我也學到了許多。
+
 
 2. latex撰寫作業
 經過作業一的批改後，我更了解老師的評分標準，應該更詳細的列出思考以及計算過程，也代表用latex撰寫的佔比會更高，我學到了要打多行運算式時，可以用\begin{aligned} 和 \end{aligned}，用\begin{align}會讓每一行運算式後有編號，並且用&可以將算式對齊，在這次作業中也花了不少時間學習latex的語法。不過像part 1 ans 1中的公式，雖然可以使它們與第一行算式對齊，但是我並沒有辦法控制所有算式的位置是在中間還是左邊，寫的方式完全一樣，但是卻依然無法改善此問題，推測是markdown轉換為html時出錯。
-經過作業一的批改後，我更了解老師的評分標準，應該更詳細的列出思考以及計算過程，也代表用latex撰寫的佔比會更高，我學到了要打多行運算式時，可以用\begin{aligned} 和 \end{aligned}，用\begin{align}會讓每一行運算式後有編號，並且用&可以將算式對齊，在這次作業中也花了不少時間學習latex的語法。不過像part 1 ans 1中的公式，雖然可以使它們與第一行算式對齊，但是我並沒有辦法控制所有算式的位置是在中間還是左邊，寫的方式完全一樣，但是卻依然無法改善此問題，推測是markdown轉換為html時出錯。
+
 3. 全英文撰寫作業
 全英文撰寫作業是這次作業我給我自己的挑戰，我發現在上課的簡報中，太容易依賴翻譯去查詢那些數學專有名詞，寫上中文解釋後下次上課依然還是會忘記，真正用英文開始寫後，我發現有好多在數學算式中常用到的詞彙，像是假設(assume)，代數化簡(algebraic simplification)，function的定義錯誤(ill-definition)等，很多都是生活中常用到的單字但是會讓人想不到可以這樣運用，透過這次作業也讓我更熟悉這些數學的英文專有名詞，也期許自己能夠越來越熟悉，到最後可以能夠像母語一樣順利的運用。
+4. review code部分
+這次負責程式部分的組員算是第一次學習python，很多python的基本概念都並不太了解，他一開始以為要在終端機輸入溫度，程式會輸出所需要的功率，但是作業範本根本就沒有input()的部分，還有像是#TODO做完通常都會刪除，但是他直接將整個code 複製貼上，最後我詳細講解的#TODO的含義，以及幫他加了三行print，將作業題目中要求的答案print出來，幫助他對每個函數的理解。
+
 
 ***
 
@@ -632,11 +635,11 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 
 | 組員姓名 | 工作時數 | 工作項目 | 工時高/低原因分析 (Bonus) |
 | :--- | :--- | :--- | :--- |
-| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)| |
+| 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)||
 | 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
 | 楊昕展 | 12小時 | 1. part1: 6, 7, 8<br>2. part2: 4 | Actually doing my parts took about 6 hours because practing Latex approach 6 hours.  |
 | 黃柏崴 | 9.5hr | 1. the program parton (5.5hr)<br> 2. write report (4hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
-| ... | ... | ... | ... |
+
 
 
 # Reflection
@@ -650,9 +653,11 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 心得：
 這次作業的時間點剛好在作業一的成績發佈之後，老師對作業的layouts, writing styles,reflection and team's distribution to the work也變得更清楚，為了更好的統一writing styles，首先我根據作業二用markdown混合latex的方式撰寫了修正過後的模板，不僅能夠統一組員的writing styles也可以更貼近老師的要求，再來用markdown + latex的好處是不用碰觸到latex排版，同時也能學習如何用latex的語法寫數學公式，最後則是處理上次作業中提及的共編問題，我寫了git 和 github的教學文檔，教了組員們必要的git知識，即使還是遇到了常見的版本衝突問題，花了一段時間才解決，但是我也同樣學到了許多。
 
+作業的部分我其實沒有太大的問題，可能是因為高中微積分教的比較扎實的緣故，作業的難度並沒有高到我無法接受的程度，在寫作業的過程，邊寫邊對照簡報提及的公式內容令我受益良多，我能夠更好的記住這些公式的英文名稱，且在看簡報的過程中，順便整理了一下簡報的所有公式，仔細梳理連續，極限，微分這三者之間的關係與差異，是整個作業中我收穫最大的部分。
+
 從這次的作業中，我個人學到了許多關於安排教學進度和教學組員的技巧，在這之前，我比較不擅長表達自己的想法，就只是做好別人指派給我的工作，但是在與組員交流過後，我發現組員也和我很像，但是這樣作業會開天窗，所以我想要先試著改變自己，嘗試多與組員交流，了解他們吸收知識的程度，並且動態調整我們想要新學習的內容。目前我們的workflow仍有很大的優化空間，下次作業的部分我想要試著讓組員學習git branch，目前組員對git 仍然不是很熟悉，有時會不小心將別人修改過的版本覆蓋掉，branch就能夠很好的解決這個問題，只需最後在merge就好，最後我的目標希望能夠讓組員間的分工與共編變得更加流暢。
 
-團隊工作風格的部分，我認為我們可以更早的開始進行作業討論，即使都還沒預覽題目也沒關係，約個時間一起討論並且同時做效率也會比較高，我也更能夠掌握組員的學習狀況，且更好講解學習事項的原理以及方法，只是要約到四個人同時有空的時間真的好難:(
+團隊工作風格的部分，我認為我們可以更早的開始進行作業討論，即使都還沒預覽題目也沒關係，約個時間一起討論並且同時做效率也會比較高，我也更能夠掌握組員的學習狀況，且更好講解學習事項的原理以及方法，只是要約到四個人同時有空的時間真的好難:(。還有組員們的feedback對我來說很重要，雖然我很早就把自己作業的部分包含教學文檔處理完，還加上了youtube補充影片，但是傳了訊息後大家都沒仔細看，結果剩下最後幾天大家開始做時，每個人都在問我教學文檔上的問題，讓我有點沮喪，當然我寫的教學有很多不夠仔細的地方，只是如果組員能夠更早的開始寫作業並且回報問題與錯誤，我就能更早迭代教學文檔的部分，讓他變得更完善，後寫的組員也能夠比較有效率的解決錯誤，能更好地專注在作業內容上，而不是到截止日期前，大家都在問同樣的問題，然後再加上新的版本衝突問題出現，其實讓我有點吃不消，但也謝謝組員在我教過後也能夠幫我分擔教學責任。溝通的部分我們也有很大的進步空間，像是我應該更清楚地講出作業要求，截止日期，更詳細的解釋為什麼要學git或是為什麼不直接使用overleaf而用latex+markdown，讓組員更好的了解我們要達成的目標，就不會發生有人用overleaf寫初稿，導致學了這次作業用不到的latex排版語法，不僅他要多花時間完成我們使用的格式，我也不用再重新教一次為什麼markdown裡面可以用latex，以及應該怎麼在markdown中正確的書寫latex，這樣可以極大的提升我們的工作效率。
 
 ***
 
