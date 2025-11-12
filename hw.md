@@ -242,7 +242,7 @@ Therefore, by the precise definition of one-sided limit, $\displaystyle \lim_{x 
 ***
 
 ## Q8
-Prove that $\displaystyle \lim_{x \to -3} \frac{1}{(x+3)^4} = \infty$ using the precise definition of an infinite limit.
+Prove that $ \lim_{x \to -3} \frac{1}{(x+3)^4} = \infty$ using the precise definition of an infinite limit.
 ## Ans8
 First, we want to find a number $\delta$ such that if $\displaystyle 0 < |x - (-3)| < \delta$, then $\displaystyle \frac{1}{(x+3)^4} > M$ (holds for all positive numbers). $\displaystyle \frac{1}{(x+3)^4} > M \implies \frac{1}{M} < (x+3)^4 \implies \sqrt[4]{\frac{1}{M}} < x + 3 \implies \sqrt[4]{\frac{1}{M}} < |x + 3| \implies \sqrt[4]{\frac{1}{M}} < |x - (-3)|$, we get $\displaystyle |x - (-3)| > \sqrt[4]{\frac{1}{M}}$.
 
@@ -358,9 +358,9 @@ $$
 ## Q4
 Use properties of limits to evaluate the limit.
 
-1. $\displaystyle \lim_{x \to 2} x \sqrt{20 - x^2}$
+1. $ \lim_{x \to 2} x \sqrt{20 - x^2}$
 
-2. $\displaystyle \lim_{\theta \to \frac{\pi}{2}} \sin(\tan(\cos\theta))$ 
+2. $ \lim_{\theta \to \frac{\pi}{2}} \sin(\tan(\cos\theta))$ 
 ## Ans4
 1. First, separate $x \sqrt{20 - x^2}$, and consider $x$ and $\sqrt{20-x^2}$ individually. $x$ is a polynomial function. That mean, on its domain $\{x | x \in \mathbb{R}\}$, it must be continuous. And $\sqrt{20-x^2}$ is a root function, it must also be continuous on its domain $\{ x \in \mathbb{R} |  -\!\!\sqrt{20} \le x \le \sqrt{20} \}$. According to the properties of continuity, $x \sqrt{20 - x^2}$ must be continuity,  with the range $-\!\!\sqrt{20} \le x \le \sqrt{20}$. Next, since $x = 2$ is within this range, let $x \sqrt{20 - x^2}$ is \(f(x)\). Therefore, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = f(2) = 2 \sqrt{20 - 2^2} = 2 \sqrt{16} = 2 \cdot 4 = 8$. Or, $\displaystyle \lim_{x \to 2} x \sqrt{20-x^2} = (\lim_{x \to 2}x)(\lim_{x \to 2}\sqrt{20-x^2})=2 \sqrt{16} = 2 \cdot 4 = 8$(Product Law).
 
