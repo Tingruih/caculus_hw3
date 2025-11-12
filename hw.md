@@ -536,6 +536,7 @@ range of wattage is 33.12 < w < 32.88
 Draw the graph to illustrate the limit interms of the $\varepsilon , \delta $ definition of $ \lim _{x\rightarrow a}f(x)=L$ .
 
 ## Ans3:
+![alt text](images/image.png)
 let f(x) = x, a = 1
 
 $\forall a,  \lim _{x\rightarrow a}f(x)=a$
@@ -545,8 +546,6 @@ $ \because \forall \varepsilon >0,\exists \delta >0\mathrm{\  such\  that\  }0<|
 $ \therefore |f(x)-a|=|x-a| $
 
 when $ \varepsilon = \delta$ , $ \lim _{x\rightarrow a}f(x)=L$ is established.
-
-![alt text](images/image.png)
 
 
 <!-- pagebreak -->
@@ -558,7 +557,7 @@ when $ \varepsilon = \delta$ , $ \lim _{x\rightarrow a}f(x)=L$ is established.
 | 411485002 楊昕展 | part1: 6, 7, 8<br> part2: 4 |   |
 | 411485003 胡庭睿 | part 1:1,2<br> part 2:1,2<br> Appendix A,B|   |
 | 411485018 蘇星丞 | part1: 3, 4, 5<br> part2: 3 |   |
-| 411485042 黃柏崴 | 程式部分 |   |
+| 411485042 黃柏崴 | 程式部分 | part1: 1 ~ 8 |
 
 
 # Challenges and Difficulties
@@ -595,7 +594,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 2. latex編輯
 開始利用latex寫報告讓我意識到他的方便，這是大學前完全接觸不到的技巧，他可以以更專業的方式、符號直觀的表達出來，而且有了上次作業的經驗，這次報告的書寫比上次順手得多，但還是有些不足，我還是時常需要詢問 AI，只是更知道該用甚麼方式去寫。這些經歷讓我對他們更加熟悉，他能讓撰寫報告變得更加方便而且也省去一個個抓的排版，未來在考研或其他需要做報告的時候，有這些經驗也會讓我更加得心應手。
 3. 作業內容
-這次作業我所花費的時間算是比以往多很多，我認為第一個原因是我對程式的不熟悉，很多地方還須找答案，好在順利的完成功課，第二個是我有
+這次作業我所花費的時間算是比以往多很多，我認為第一個原因是我對程式的不熟悉，很多地方還須找答案，好在順利的完成功課，第二個是我在這次報告我們組採用新的共編與組員決定用英文撰寫報告，而我在報告寫答案的時候增加英文使用量，可惜程式註解部分沒用，在下次輪到我程式的話我會改用註解，在題目3的部分我看不太懂，求助組員才知道要用甚麼方式去寫。
 
 ***
 
@@ -627,7 +626,7 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 | 胡庭睿 | 20hr | 1. part 1:1,2 (1hr)<br> 2. part 2:1,2 (2hr)<br> 3. Appendix A,B (4hr)<br> 4. the report template (3hr)<br> 5. git and github tutorial(2hr)<br>6. find ways of converting markdown to pdf (8hr)<br>7. improve whole team workflow on report(2hr)| |
 | 蘇星丞| 5hr | 1. part1: 3, 4, 5<br>2. part2: 3<br>  | except the part of writting the homework, i did less in addtional works. |
 | 楊昕展 | 12小時 | 1. part1: 6, 7, 8<br>2. part2: 4 | Actually doing my parts took about 6 hours because practing Latex approach 6 hours.  |
-| 黃柏崴 | 6.5hr | 1. the program parton (4hr)<br> 2. write report (2.5hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
+| 黃柏崴 | 9.5hr | 1. the program parton (5.5hr)<br> 2. write report (4hr)| make TODOs and write annotations after understand the program .<br> try to use some English in the report .|
 | ... | ... | ... | ... |
 
 
@@ -660,7 +659,9 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 心得：
 我負責的部分是我不熟的程式部分，但實際做下來發現要做的事其實沒那麼可怕，但也可以了解 python 在做甚麼和如何書寫，這次我更加了解程式的功用，例如它可以用來生成這麼詳細的圖片，這是我完全沒有深思的部分，高中時期去的化工營介紹程式可以用來時時監控反應的變化、不同數據產出的結果，這次的作業是做晶體的成長在不同溫度的功率並畫出誤差範圍，這也對程式的跨領域有了更深的認知。
 
-這次我們使用latex的語法寫報告，不同的是這次新增了共編的方式，但我目前還不是很熟悉，很多地方還時要靠詢問同學與 AI 才能寫出來，過程中常常怕不小心忘記做甚麼、做錯甚麼，一直問同學這樣有沒有問題，希望在下次作業能減少這些懵懂，提高做作業的效率。而 latex 的部分隨然還是需要靠 AI 幫忙轉換，但在一些比較常用的部分可以自己寫，而且我也更懂甚麼時候要用甚麼與各自的意思，我相信我以後還會持續進步，最終能幾乎不需依靠 AI 就能寫出篇完整的報告。很慶幸有這些機會能實際操作這些以前沒有的東西，雖然現在還不適特別熟悉，但在老師的帶領與組員的幫助下只會更加得心應手！
+這次我們使用latex的語法寫報告，不同的是這次新增了共編的方式，但我目前還不是很熟悉，很多地方還時要靠詢問同學與 AI 才能寫出來，過程中常常怕不小心忘記做甚麼、做錯甚麼，一直問同學這樣有沒有問題，希望在下次作業能減少這些懵懂，提高做作業的效率。而 latex 的部分隨然還是需要靠 AI 幫忙轉換，但在一些比較常用的部分可以自己寫，而且我也更懂甚麼時候要用甚麼與各自的意思，我相信我以後還會持續進步，最終能幾乎不需依靠 AI 就能寫出篇完整的報告。
+
+我們團隊的問題是我們過度依賴一位同學，共編、指令的教學都依靠著他，雖然這樣每個組員都能學會怎麼操作，但對於他就會變成壓力、負擔，下次我會自己上網查找解法，減少同學的壓力，同時也能讓我更加充實的學習到這些技巧，另一方面，我們小組很難約到共同的時間 meeting ，而且周末也都回家就更難約到了，我認為我們可以在上課後的時間共同討論，或在午餐時間多開幾個會議將自己有問題的地方提出，期待下次能進步。很慶幸有這些機會能實際操作這些以前沒有的東西，雖然現在還不適特別熟悉，但在老師的帶領與組員的幫助下只會更加得心應手！
 
 
 ***
