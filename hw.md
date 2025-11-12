@@ -175,10 +175,10 @@ What happens to point $R$ as circle $C_2$ shrinks (as $r \to 0^+$)?
 ## Ans4
 $$
 \begin{aligned}
-&x^2+y^2=r^2 \hspace{1cm} \text{(1)} \\
-&(x-1)^2+y^2=1 \hspace{1cm} \text{(2)} \\
-&\text{(1) - (2) cancel } y^2\\
-&=2x-1=r^2-1\\
+&x^2+y^2=r^2 \hspace{1cm} &\text{(1)} \\
+&(x-1)^2+y^2=1 \hspace{1cm} &\text{(2)} \\
+&\text{(1) - (2)}&\text{cancel}\hspace{0.2cm}  y^2\\
+&2x-1=r^2-1\\
 &x=\frac{r^2}{2}\hspace{1cm}y=\frac{r^2}{2}\\
 &Q(x, y)=(\frac{r^2}{2}, \frac{r^2}{2})\\
 &P(0,r)\\
