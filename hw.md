@@ -389,7 +389,7 @@ Use properties of limits to evaluate the limit.
 
 2. $\sin \theta$, $\cos \theta$, and $\tan \theta$ all are trigonometric, and they are continuous on their domains. Except for $\tan \theta$, whose domain is $\{\theta\in \mathbb{R}| \cos \theta \neq 0 \}$, that is $\theta \neq \frac{\pi}{2} + k (k \in \mathbb{Z})$, the domains of the other two functions are $\{\theta | \theta \in \mathbb{R}\}$. Since $\cos \theta$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is continuous, and $\tan (\cos \frac{\pi}{2}) = \tan (0) = 0$ is continuous. According to the continuity theorem, $\tan (\cos \theta)$ is continuous at $\theta = \frac{\pi}{2}$. We can get $\ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0$.<br>Next, consider $\sin(\tan(\cos\theta))$. Since $\tan (\cos \theta)$ has a value of 0 at $\theta = \frac{\pi}{2}$, it is not defined. Let $b = \tan (\cos \frac{\pi}{2}) = 0$. From $\sin b = \sin 0 = 0$, we can know sin b is continuous at $b$, and $ \lim_{\theta \to \frac{\pi}{2}}\tan(\cos \theta) = 0 = b$. According to the continuity therom, $ \lim_{\theta \to \frac{\pi}{2}}\sin b = \lim_{\theta \to \frac{\pi}{2}}\sin (\tan (\cos \theta)) = \sin (\lim_{\theta \to \frac{\pi}{2}}\tan (\cos \theta)) = \sin 0 = 0$.
 
-<!-- pagebreak -->
+
 
 # Crystal Growth Inspection
 
