@@ -371,8 +371,6 @@ Use properties of limits to evaluate the limit.
 
 # Crystal Growth Inspection
 
-## Crystal growth furnaces are used in research to determine how best to manufacture crystalsused in electronic components. For proper growth of a crystal, the temperature must becontrolled accurately by adjusting the input power. Suppose the relationship is given by $ T(w) = 0.1w ^ 2 +2.155w +20$ where T is the temperature in degrees Celsius and w is the power input in watts. 
-
 ## test_crystal_growth.py
 
 ```python
@@ -390,15 +388,12 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     
     # Begin plotting
     plt.figure(figsize=(10, 6)) # 設定圖片大小
-    plt.plot(w_values, T_values, label='T(w) = 0.1w² + 2.155w + 20', color='black') 
-    # 畫橫軸w_values、縱軸T_values、設定圖形標籤T(w) = 0.1w² + 2.155w + 20、設定顏色為黑色
+    plt.plot(w_values, T_values, label='T(w) = 0.1w² + 2.155w + 20', color='black') # 畫橫軸w_values、縱軸T_values、設定圖形標籤T(w) = 0.1w² + 2.155w + 20、設定顏色為黑色
     # Plot point at T=200
-    plt.scatter([target_power], [target_temperature], color='black', zorder=5)
-    # 在(x, y) = (target_power, target_temperature)劃一個黑點
+    plt.scatter([target_power], [target_temperature], color='black', zorder=5)# 在(x, y) = (target_power, target_temperature)劃一個黑點
     plt.axhline(y=target_temperature, color='gray', linestyle='--')  # Horizontal line at T=target_temperature
     plt.axvline(x=target_power, color='gray', linestyle='--')  # Vertical line at target_power
-    plt.text(target_power + 0.1, target_temperature + 0.1, f"w = {target_power:.3f}", fontsize=9)
-    #在點(x, y) = (target_power, target_temperature)上方 0.1 的地方寫出文字target_power(小數點後三位)並設定大小 9
+    plt.text(target_power + 0.1, target_temperature + 0.1, f"w = {target_power:.3f}", fontsize=9)#在點(x, y) = (target_power, target_temperature)上方 0.1 的地方寫出文字target_power(小數點後三位)並設定大小 9
     
     # Plot horizontal lines as epsilon bounds
     y_high = target_temperature + eps
@@ -415,10 +410,7 @@ def viz_limit(target_temperature, eps, target_power, delta, power_range):
     # Plot vertical lines as delta bounds
     x_left = target_power
     x_right = target_power
-    delta = max(abs(target_power - lower_power), abs(higher_power - target_power))
-    x_left = target_power - delta
-    x_right = target_power + delta
-    # 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
+    delta = max(abs(target_power - lower_power), abs(higher_power - target_power))# 計算在溫度誤差範圍 1 內時，功率的最大偏差(delta)
     x_left = target_power - delta
     x_right = target_power + delta # 算出 X 的左右範圍
     plt.axvline(x=x_left, color='blue', linestyle='-', label='delta bounds')
@@ -495,6 +487,8 @@ def solve_power(temperature): # 從溫度反推功率
 終端機測資:
 
 ![alt text](images/terminal.png)
+
+Crystal growth furnaces are used in research to determine how best to manufacture crystalsused in electronic components. For proper growth of a crystal, the temperature must becontrolled accurately by adjusting the input power. Suppose the relationship is given by $ T(w) = 0.1w ^ 2 +2.155w +20$ where T is the temperature in degrees Celsius and w is the power input in watts. 
 
 ## Q1:
 How much power is needed to maintain the temperature at $ 200^\circ\mathrm{C}$ ?
@@ -597,9 +591,11 @@ git是我這次作業第一次用，其中碰到了很多問題像是版本衝�
 ### 姓名： 黃柏崴
 ### 遇到的困難與挑戰：
 1. git共編與
-這是我第一次接觸 git共編，使用中常常會怕不小心沒有 pull 到資料而把別人的部分蓋掉，而且對指令的操作部分也不太熟，但有求助厲害的組員。像是git add .的意思是把資料存到暫存區，git commit -m的意思是把暫存區中的變更提交到本地版本庫，而git pull -- rebase的意思是先把遠端的更新拉下來，然後再把本地的提交重新套用在最新的遠端版本上，--rebase是類似排隊的功能，希望未來能完全熟悉這項技能，成為別人口中厲害的組員。
+這是我第一次接觸 git共編，使用中常常會怕不小心沒有 pull 到資料而把別人的部分蓋掉，而且對指令的操作部分也不太熟，但有求助厲害的組員。像是git add .的意思是把資料存到暫存區，git commit -m的意思是把暫存區中的變更提交到本地版本庫，而git pull --rebase的意思是先把遠端的更新拉下來，然後再把本地的提交重新套用在最新的遠端版本上，--rebase是類似排隊的功能，希望未來能完全熟悉這項技能，成為別人口中厲害的組員。
 2. latex編輯
 開始利用latex寫報告讓我意識到他的方便，這是大學前完全接觸不到的技巧，他可以以更專業的方式、符號直觀的表達出來，而且有了上次作業的經驗，這次報告的書寫比上次順手得多，但還是有些不足，我還是時常需要詢問 AI，只是更知道該用甚麼方式去寫。這些經歷讓我對他們更加熟悉，他能讓撰寫報告變得更加方便而且也省去一個個抓的排版，未來在考研或其他需要做報告的時候，有這些經驗也會讓我更加得心應手。
+3. 作業內容
+這次作業我所花費的時間算是比以往多很多，我認為第一個原因是我對程式的不熟悉，很多地方還須找答案，好在順利的完成功課，第二個是我有
 
 ***
 
